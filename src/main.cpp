@@ -25,7 +25,7 @@ int main() {
         if(comando == "quit") {
             std::cout << "Saindo do Concordo\n";
         } else if (comando == "creat-user") {
-            std::cout << "criando User...\n";
+            
             if(posSegundoEspaco != std::string::npos && posTerceiroEspaco != std::string::npos) {
                 email = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
                 senha = linha.substr(posSegundoEspaco + 1, posTerceiroEspaco - posSegundoEspaco - 1);

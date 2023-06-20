@@ -7,15 +7,18 @@ Sistema::Sistema () {
 }
 
 void Sistema::criarUsuario (std::string email, std::string senha, std::string nome) {
-    this->contID++;
-    if (!this->emailUsado(email)) {
-        Usuario u(email, senha, nome, this->contID);
-        this->usuarios.push_back(u);
-        std::cout << "Usuario criado!\n";
+    if(this->estado == "deslogado") {
+        if (!this->emailUsado(email)) {
+            this->contID++;
+            Usuario u(email, senha, nome, this->contID);
+            this->usuarios.push_back(u);
+            std::cout << "Usuario criado!\n";
+        } else {
+            std::cout << "Usuario já existe!\n";
+        }
     } else {
-        std::cout << "Usuario já existe!\n";
+        std::cout << "logado em uma conta! para criar novo usuario precisa estar deslogado!\n";
     }
-    
 
 }
 
@@ -33,20 +36,23 @@ bool Sistema::emailUsado (std::string email) {
 
 void Sistema::login (std::string email, std::string senha) {
     int cont = 0;
+    if(this->estado == "deslogado") {
+        if (this->emailUsado(email)) {
+            while(this->usuarios[cont].getEmail() != email) {
+                cont++;
+            }
 
-    if (this->emailUsado(email)) {
-        while(this->usuarios[cont].getEmail() != email) {
-            cont++;
-        }
-
-        if(this->usuarios[cont].confereSenha(senha)) {
-            this->estado = "logado";
-            this->IDuserLogado = this->usuarios[cont].getID();
-            std::cout << "logado como " << email << std::endl;
+            if(this->usuarios[cont].confereSenha(senha)) {
+                this->estado = "logado";
+                this->IDuserLogado = this->usuarios[cont].getID();
+                std::cout << "logado como " << email << std::endl;
+            } else {
+                std::cout << "senha nao confere!\n";
+            }
         } else {
-            std::cout << "senha nao confere!\n";
+            std::cout << "email nao cadastrado!\n";
         }
     } else {
-        std::cout << "email nao cadastrado!\n";
+        std::cout << "ja esta logado em uma conta\n";
     }
 }
