@@ -31,12 +31,7 @@ int main() {
                 senha = linha.substr(posSegundoEspaco + 1, posTerceiroEspaco - posSegundoEspaco - 1);
                 nome = linha.substr(posTerceiroEspaco + 1);
 
-                if(! s.emailUsado(email)) {
-                    s.criarUsuario(email, senha, nome);
-                    std::cout << "Usuario criado!\n";
-                } else {
-                    std::cout << "Usuario já existe!\n";
-                }
+            s.criarUsuario(email, senha, nome);        
 
             } else {
                 std::cout << "comando creat-user com parametros invalidos!!!\n";
@@ -47,11 +42,8 @@ int main() {
                 email = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
                 senha = linha.substr(posSegundoEspaco + 1);
 
-                if(s.emailUsado(email)) {
-                    s.login(email, senha);
-                } else {
-                    std::cout << "email nao cadastrado!\n";
-                }
+                s.login(email, senha);
+                
             } else {
                 std::cout << "comando login com parametros invalidos!!!\n";
             }
