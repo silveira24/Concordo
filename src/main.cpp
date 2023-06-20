@@ -48,8 +48,10 @@ int main() {
                 std::cout << "comando login com parametros invalidos!!!\n";
             }
 
+        } else if (comando == "disconnect") {
+           s.disconectar();
         } else {
-           std::cout << "comando invalido!\n";
+            std::cout << "comando invalido!\n";
         }
 
     } while (comando != "quit");

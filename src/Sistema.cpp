@@ -56,3 +56,13 @@ void Sistema::login (std::string email, std::string senha) {
         std::cout << "ja esta logado em uma conta\n";
     }
 }
+
+void Sistema::disconectar() {
+    if (this->estado != "deslogado") {
+        std::cout << "Disconectando usuario " << this->usuarios[this->IDuserLogado - 1].getEmail() << std::endl;
+        this->estado = "deslogado";
+        this->IDuserLogado = NULL;
+    } else {
+        std::cout << "nao esta conectado!\n";
+    }
+}
