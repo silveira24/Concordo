@@ -1,0 +1,3 @@
+D:/Meus Documentos/docs/Ufrn/LP1 - Sidemar/Concordo/build/CMakeFiles/Concordo.dir
+D:/Meus Documentos/docs/Ufrn/LP1 - Sidemar/Concordo/build/CMakeFiles/edit_cache.dir
+D:/Meus Documentos/docs/Ufrn/LP1 - Sidemar/Concordo/build/CMakeFiles/rebuild_cache.dir

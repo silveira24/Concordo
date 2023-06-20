@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.5)
+
+project(ProjetoConcordo)
+
+# Adicione o caminho para os arquivos de inclusão (headers)
+include_directories(include)
+
+# Lista de arquivos de origem (source) do projeto
+set(SOURCES 
+src/main.cpp 
+src/Usuario.cpp
+src/Sistema.cpp)
+
+# Defina o executável e especifique os arquivos de origem
+add_executable(Concordo ${SOURCES})
