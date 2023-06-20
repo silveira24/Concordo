@@ -128,6 +128,30 @@ Concordo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/build
 .PHONY : Concordo/fast
 
+src/Servidor.obj: src/Servidor.cpp.obj
+.PHONY : src/Servidor.obj
+
+# target to build an object file
+src/Servidor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/src/Servidor.cpp.obj
+.PHONY : src/Servidor.cpp.obj
+
+src/Servidor.i: src/Servidor.cpp.i
+.PHONY : src/Servidor.i
+
+# target to preprocess a source file
+src/Servidor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/src/Servidor.cpp.i
+.PHONY : src/Servidor.cpp.i
+
+src/Servidor.s: src/Servidor.cpp.s
+.PHONY : src/Servidor.s
+
+# target to generate assembly for a file
+src/Servidor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/src/Servidor.cpp.s
+.PHONY : src/Servidor.cpp.s
+
 src/Sistema.obj: src/Sistema.cpp.obj
 .PHONY : src/Sistema.obj
 
@@ -209,6 +233,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Concordo
+	@echo ... src/Servidor.obj
+	@echo ... src/Servidor.i
+	@echo ... src/Servidor.s
 	@echo ... src/Sistema.obj
 	@echo ... src/Sistema.i
 	@echo ... src/Sistema.s

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Concordo.dir/src/Servidor.cpp.obj"
+  "CMakeFiles/Concordo.dir/src/Servidor.cpp.obj.d"
   "CMakeFiles/Concordo.dir/src/Sistema.cpp.obj"
   "CMakeFiles/Concordo.dir/src/Sistema.cpp.obj.d"
   "CMakeFiles/Concordo.dir/src/Usuario.cpp.obj"

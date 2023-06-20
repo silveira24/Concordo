@@ -24,7 +24,7 @@ int main() {
 
         if(comando == "quit") {
             std::cout << "Saindo do Concordo\n";
-        } else if (comando == "creat-user") {
+        } else if (comando == "create-user") {
             
             if(posSegundoEspaco != std::string::npos && posTerceiroEspaco != std::string::npos) {
                 email = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
@@ -34,7 +34,7 @@ int main() {
             s.criarUsuario(email, senha, nome);        
 
             } else {
-                std::cout << "comando creat-user com parametros invalidos!!!\n";
+                std::cout << "comando create-user com parametros invalidos!!!\n";
             }
                        
         } else if (comando == "login") {
@@ -50,6 +50,14 @@ int main() {
 
         } else if (comando == "disconnect") {
            s.disconectar();
+        } else if (comando == "create-server"){
+            if(posPrimeiroEspaco != std::string::npos) {
+                nome = linha.substr(posPrimeiroEspaco + 1);
+
+                s.criarServidor(nome);
+            } else {
+                std::cout << "comando create-server com parametros invalidos!!!\n";
+            }
         } else {
             std::cout << "comando invalido!\n";
         }

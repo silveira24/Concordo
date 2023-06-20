@@ -1,6 +1,6 @@
 #include "Sistema.h"
 
-Sistema::Sistema () {
+Sistema::Sistema (){
     this->contID = 0;
     this->estado = "deslogado";
     this->IDuserLogado = 0;
@@ -34,6 +34,17 @@ bool Sistema::emailUsado (std::string email) {
     return usado;
 }
 
+bool Sistema::serverExiste (std::string nome) {
+    bool existe = false;
+    for(int i = 0; i < this->servidores.size(); i++) {
+        if (this->servidores[i].getNome() == nome) {
+            existe = true;
+        }
+    }
+
+    return existe;
+}
+
 void Sistema::login (std::string email, std::string senha) {
     int cont = 0;
     if(this->estado == "deslogado") {
@@ -61,8 +72,22 @@ void Sistema::disconectar() {
     if (this->estado != "deslogado") {
         std::cout << "Disconectando usuario " << this->usuarios[this->IDuserLogado - 1].getEmail() << std::endl;
         this->estado = "deslogado";
-        this->IDuserLogado = NULL;
+        this->IDuserLogado = 0;
     } else {
         std::cout << "nao esta conectado!\n";
+    }
+}
+
+void Sistema::criarServidor(std::string nome) {
+    if(this->estado == "logado") {
+        if(!this->serverExiste(nome)){
+            Servidor s(nome, this->IDuserLogado);
+            this->servidores.push_back(s);
+            std::cout << "Servidor criado!\n";
+        } else {
+            std::cout << "Servidor com esse nome ja existe!\n";
+        }
+    } else {
+        std::cout << "precisa estar logado para criar um servidor!\n";
     }
 }
