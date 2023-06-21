@@ -80,6 +80,8 @@ int main() {
             } else {
                 std::cout << "comando set-server-invite-code com parametros invalidos!!!\n";
             }
+        } else if(comando == "list-servers") {
+            s.listarServidores();
         } else {
             std::cout << "comando invalido!\n";
         }

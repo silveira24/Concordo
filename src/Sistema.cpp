@@ -144,3 +144,13 @@ void Sistema::setConvite(std::string nomeServidor, std::string convite) {
         std::cout << "precisa estar logado para modificar o codigo de convite de um servidor!\n";
     }
 }
+
+void Sistema::listarServidores() {
+    if(this->estado == "logado"){
+        for(int i = 0; i < this->servidores.size(); i++) {
+            std::cout << this->servidores[i].getNome() << std::endl;
+        }
+    } else {
+        std::cout << "precisa estar logado para ver a lista de servidores!\n";
+    }
+}
