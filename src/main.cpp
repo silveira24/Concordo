@@ -89,6 +89,20 @@ int main() {
             } else {
                 std::cout << "comando remove-server com parametros invalidos!!!\n";
             }
+        } else if (comando == "enter-server"){
+            if(posPrimeiroEspaco != std::string::npos) {
+                if(posSegundoEspaco != std::string::npos){
+                    nome = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
+                    convite = linha.substr(posSegundoEspaco + 1);
+                } else {
+                    nome = linha.substr(posPrimeiroEspaco + 1);
+                    convite = "";
+                }
+
+                s.entrarServidor(nome, convite);
+            } else {
+                std::cout << "comando enter-server com parametros invalidos!!!\n";
+            }
         } else {
             std::cout << "comando invalido!\n";
         }

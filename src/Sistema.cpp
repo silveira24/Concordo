@@ -94,6 +94,7 @@ void Sistema::criarServidor(std::string nome) {
     if(this->estado == "logado") {
         if(!this->serverExiste(nome)){
             Servidor s(nome, this->IDuserLogado);
+            s.adicionaParticipante(this->IDuserLogado);
             this->servidores.push_back(s);
             std::cout << "Servidor criado!\n";
         } else {
@@ -170,5 +171,31 @@ void Sistema::removerServidor(std::string nome) {
         }
     } else {
         std::cout << "precisa estar logado para remover um servidor!\n";
+    }
+}
+
+void Sistema::entrarServidor(std::string nome, std::string convite) {
+    if(this->estado == "logado"){
+        if(this->serverExiste(nome)){
+            int indice = this->retornaIndiceServidor(nome);
+            if(this->IDuserLogado == this->servidores[indice].getIDdono() || this->servidores[indice].verificaConvite(convite)) {
+                this->estado = "servidor";
+                this->indiceServerAtual = indice;
+                this->servidores[indice].adicionaParticipante(this->IDuserLogado);
+                std::cout << "entrou no servidor com sucesso!\n";
+            } else {
+                if(convite == ""){
+                    std::cout << "Servidor requer codigo convite!\n";
+                } else {
+                    std::cout << "codigo convite incorreto!\n";
+                }
+            }
+        } else {
+            std::cout << "servidor '" << nome << "' nao encontrado!\n";
+        }
+    } else if(this->estado == "deslogado") {
+        std::cout << "precisa estar logado para entrar em um servidor!\n";
+    } else {
+        std::cout << "voce ja esta em um servidor!\n";
     }
 }

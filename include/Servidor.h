@@ -18,6 +18,9 @@ class Servidor {
         int getIDdono();
         void setDescricao(std::string descricao);
         void setConvite(std::string convite);
+        void adicionaParticipante(int ID);
+        bool usuarioParticipa(int ID);
+        bool verificaConvite(std::string convite);
 
 };
 

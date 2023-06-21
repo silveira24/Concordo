@@ -11,7 +11,7 @@ class Sistema {
         std::vector<Usuario> usuarios;
         std::vector<Servidor> servidores;
         int IDuserLogado;
-        std::string nomeServerAtual;
+        int indiceServerAtual;
         std::string nomeCanalAtual;
         int contID;
         std::string estado;
@@ -29,6 +29,7 @@ class Sistema {
         void setConvite(std::string nomeServidor, std::string convite);
         void listarServidores();
         void removerServidor(std::string nome);
+        void entrarServidor(std::string nome, std::string convite);
 };
 
 #endif

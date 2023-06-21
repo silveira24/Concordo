@@ -21,3 +21,30 @@ void Servidor::setDescricao(std::string descricao) {
 void Servidor::setConvite(std::string convite) {
     this->codigoConvite = convite;
 }
+
+void Servidor::adicionaParticipante(int ID) {
+    if(!this->usuarioParticipa(ID)) {
+        this->participantesIDs.push_back(ID);
+    }
+}
+
+bool Servidor::usuarioParticipa(int ID) {
+    for(int i = 0; i < this->participantesIDs.size(); i++) {
+        if(ID == this->participantesIDs[i]) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool Servidor::verificaConvite(std::string convite) {
+    if(this->codigoConvite == ""){
+        return true;
+    }
+    if(this->codigoConvite == convite) {
+        return true;
+    } else {
+        return false;
+    }
+}
