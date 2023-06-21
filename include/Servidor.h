@@ -15,6 +15,9 @@ class Servidor {
     public:
         Servidor(std::string nome, int IDdono);
         std::string getNome();
+        int getIDdono();
+        void setDescricao(std::string descricao);
+
 };
 
 #endif

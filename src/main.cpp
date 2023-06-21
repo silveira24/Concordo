@@ -7,7 +7,7 @@ int main() {
 
     std::string linha;
     std::string comando;
-    std::string email, senha, nome;
+    std::string email, senha, nome, descricao;
 
     std::cout << "BEM-VINDO AO CONCORDO!!!\n";
     do {
@@ -57,6 +57,14 @@ int main() {
                 s.criarServidor(nome);
             } else {
                 std::cout << "comando create-server com parametros invalidos!!!\n";
+            }
+        } else if(comando == "set-server-desc") {
+            if(posSegundoEspaco != std::string::npos) {
+                nome = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
+                descricao = linha.substr(posSegundoEspaco + 1);
+                s.mudarDescricaoServidor(nome, descricao);
+            } else {
+                std::cout << "comando set-server-desc com parametros invalidos!!!\n";
             }
         } else {
             std::cout << "comando invalido!\n";

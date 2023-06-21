@@ -45,6 +45,18 @@ bool Sistema::serverExiste (std::string nome) {
     return existe;
 }
 
+int Sistema::retornaIndiceServidor(std::string nome) {
+    if(this->serverExiste(nome)) {
+        int cont = 0;
+        while(this->servidores[cont].getNome() != nome) {
+            cont++;
+        }
+        return cont;
+    } else {
+        return -1;
+    }
+}
+
 void Sistema::login (std::string email, std::string senha) {
     int cont = 0;
     if(this->estado == "deslogado") {
@@ -89,5 +101,24 @@ void Sistema::criarServidor(std::string nome) {
         }
     } else {
         std::cout << "precisa estar logado para criar um servidor!\n";
+    }
+}
+
+void Sistema::mudarDescricaoServidor(std::string nomeServidor, std::string descricao) {
+    if (this->estado == "logado") {
+        if(this->serverExiste(nomeServidor)){
+            int indice = this->retornaIndiceServidor(nomeServidor);
+            if(this->IDuserLogado == this->servidores[indice].getIDdono()){
+                this->servidores[indice].setDescricao(descricao);
+                std::cout << "Descricao do servidor " << nomeServidor << " modificada!\n";
+            } else {
+                std::cout << "Voce nao pode alterar a descricao de um servidor que nao foi criado por voce\n";
+            }
+
+        } else {
+            std::cout << "Servidor " << nomeServidor << " nao existe!\n";
+        }
+    } else {
+        std::cout << "precisa estar logado para modificar a descricao de um servidor!\n";
     }
 }
