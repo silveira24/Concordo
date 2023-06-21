@@ -213,3 +213,13 @@ void Sistema::sairServidor() {
         std::cout << "voce nao esta visualizando nenhum servidor!\n";
     }
 }
+
+void Sistema::listarParticipantes() {
+    if(this->estado == "servidor") {
+        for(int i = 0; i < this->servidores[this->indiceServerAtual].tamListaParticipantes(); i++) {
+            std::cout << this->usuarios[this->servidores[this->indiceServerAtual].IDparticipante(i) - 1].getNome() << std::endl;
+        }
+    } else {
+        std::cout << "voce nao esta visualizando nenhum servidor!\n";
+    }
+}

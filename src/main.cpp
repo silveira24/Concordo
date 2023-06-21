@@ -105,6 +105,8 @@ int main() {
             }
         } else if(comando == "leave-server") {
             s.sairServidor();
+        } else if(comando == "list-participants") {
+            s.listarParticipantes();
         } else {
             std::cout << "comando invalido!\n";
         }

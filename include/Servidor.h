@@ -21,6 +21,8 @@ class Servidor {
         void adicionaParticipante(int ID);
         bool usuarioParticipa(int ID);
         bool verificaConvite(std::string convite);
+        int tamListaParticipantes();
+        int IDparticipante(int indice);
 
 };
 

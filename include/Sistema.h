@@ -31,6 +31,7 @@ class Sistema {
         void removerServidor(std::string nome);
         void entrarServidor(std::string nome, std::string convite);
         void sairServidor();
+        void listarParticipantes();
 };
 
 #endif

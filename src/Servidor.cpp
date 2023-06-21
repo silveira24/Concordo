@@ -48,3 +48,11 @@ bool Servidor::verificaConvite(std::string convite) {
         return false;
     }
 }
+
+int Servidor::tamListaParticipantes() {
+    return this->participantesIDs.size();
+}
+
+int Servidor::IDparticipante(int indice) {
+    return this->participantesIDs[indice];
+}
