@@ -28,6 +28,7 @@ class Sistema {
         void mudarDescricaoServidor(std::string nomeServidor, std::string descricao);
         void setConvite(std::string nomeServidor, std::string convite);
         void listarServidores();
+        void removerServidor(std::string nome);
 };
 
 #endif

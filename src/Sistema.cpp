@@ -154,3 +154,21 @@ void Sistema::listarServidores() {
         std::cout << "precisa estar logado para ver a lista de servidores!\n";
     }
 }
+
+void Sistema::removerServidor(std::string nome) {
+    if(this->estado == "logado"){
+        if(this->serverExiste(nome)) {
+            int indice = this->retornaIndiceServidor(nome);
+            if(this->servidores[indice].getIDdono() == this->IDuserLogado) {
+                this->servidores.erase(this->servidores.begin() + indice);
+                std::cout << "servidor '" << nome << "' removido!\n";
+            } else {
+                std::cout << "voce nao eh dono do servidor '" << nome << "'!\n";
+            }
+        } else {
+            std::cout << "servidor '" << nome << "' nao encontrado!\n";
+        }
+    } else {
+        std::cout << "precisa estar logado para remover um servidor!\n";
+    }
+}

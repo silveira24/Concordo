@@ -82,6 +82,13 @@ int main() {
             }
         } else if(comando == "list-servers") {
             s.listarServidores();
+        } else if (comando == "remove-server"){
+            if(posPrimeiroEspaco != std::string::npos) {
+                nome = linha.substr(posPrimeiroEspaco + 1);
+                s.removerServidor(nome);
+            } else {
+                std::cout << "comando remove-server com parametros invalidos!!!\n";
+            }
         } else {
             std::cout << "comando invalido!\n";
         }
