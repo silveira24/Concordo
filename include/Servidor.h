@@ -17,6 +17,7 @@ class Servidor {
         std::string getNome();
         int getIDdono();
         void setDescricao(std::string descricao);
+        void setConvite(std::string convite);
 
 };
 

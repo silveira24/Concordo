@@ -122,3 +122,25 @@ void Sistema::mudarDescricaoServidor(std::string nomeServidor, std::string descr
         std::cout << "precisa estar logado para modificar a descricao de um servidor!\n";
     }
 }
+
+void Sistema::setConvite(std::string nomeServidor, std::string convite) {
+    if(this->estado == "logado") {
+        if(this->serverExiste(nomeServidor)){
+            int indice = this->retornaIndiceServidor(nomeServidor);
+            if(this->IDuserLogado == this->servidores[indice].getIDdono()){
+                this->servidores[indice].setConvite(convite);
+                if(convite != "") {
+                    std::cout << "Codigo de convite do servidor " << nomeServidor << " modificado!\n";
+                } else {
+                    std::cout << "Codigo de convite do servidor " << nomeServidor << " removido!\n";
+                }
+            } else {
+                std::cout << "Voce nao pode alterar a descricao de um servidor que nao foi criado por voce\n";
+            }
+        } else {
+            std::cout << "Servidor " << nomeServidor << " nao existe!\n";
+        }
+    } else {
+        std::cout << "precisa estar logado para modificar o codigo de convite de um servidor!\n";
+    }
+}
