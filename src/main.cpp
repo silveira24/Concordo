@@ -103,6 +103,8 @@ int main() {
             } else {
                 std::cout << "comando enter-server com parametros invalidos!!!\n";
             }
+        } else if(comando == "leave-server") {
+            s.sairServidor();
         } else {
             std::cout << "comando invalido!\n";
         }

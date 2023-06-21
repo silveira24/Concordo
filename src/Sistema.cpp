@@ -4,6 +4,7 @@ Sistema::Sistema (){
     this->contID = 0;
     this->estado = "deslogado";
     this->IDuserLogado = 0;
+    this->indiceServerAtual = - 1;
 }
 
 void Sistema::criarUsuario (std::string email, std::string senha, std::string nome) {
@@ -82,6 +83,9 @@ void Sistema::login (std::string email, std::string senha) {
 
 void Sistema::disconectar() {
     if (this->estado != "deslogado") {
+        if(this->estado == "servidor") {
+            this->sairServidor();
+        }
         std::cout << "Disconectando usuario " << this->usuarios[this->IDuserLogado - 1].getEmail() << std::endl;
         this->estado = "deslogado";
         this->IDuserLogado = 0;
@@ -197,5 +201,15 @@ void Sistema::entrarServidor(std::string nome, std::string convite) {
         std::cout << "precisa estar logado para entrar em um servidor!\n";
     } else {
         std::cout << "voce ja esta em um servidor!\n";
+    }
+}
+
+void Sistema::sairServidor() {
+    if(this->estado == "servidor") {
+        std::cout << "saindo do servidor '" << this->servidores[this->indiceServerAtual].getNome() << "'!\n";
+        this->indiceServerAtual = -1;
+        this->estado = "logado"; 
+    } else {
+        std::cout << "voce nao esta visualizando nenhum servidor!\n";
     }
 }
