@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: Código-Fonte de include/Servidor.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Concordo<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Servidor.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SERVIDOR_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SERVIDOR_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Canal.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_servidor.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="class_servidor.html">Servidor</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_servidor.html#a52c21983ad654fb7994dead4ae433e2c">   18</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="class_servidor.html#a52c21983ad654fb7994dead4ae433e2c">usuarioDonoId</a>;                           </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_servidor.html#a1141e0835dfba56f4d01f922d2a8b34f">   19</a></span>        std::string <a class="code hl_variable" href="class_servidor.html#a1141e0835dfba56f4d01f922d2a8b34f">nome</a>;                            </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_servidor.html#a61fecd2b3435d7048d793741c5f3bfdf">   20</a></span>        std::string <a class="code hl_variable" href="class_servidor.html#a61fecd2b3435d7048d793741c5f3bfdf">descricao</a>;                       </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_servidor.html#a7448f419ead42bf7f0bd42d5bdc53ec6">   21</a></span>        std::string <a class="code hl_variable" href="class_servidor.html#a7448f419ead42bf7f0bd42d5bdc53ec6">codigoConvite</a>;                   </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_servidor.html#a8a6344bfd8fc30dda70fca49a9b7234f">   22</a></span>        std::vector&lt;Canal *&gt; <a class="code hl_variable" href="class_servidor.html#a8a6344bfd8fc30dda70fca49a9b7234f">canais</a>;                 </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_servidor.html#ac26153c0e4ee691298741be313624ea9">   23</a></span>        std::vector&lt;int&gt; <a class="code hl_variable" href="class_servidor.html#ac26153c0e4ee691298741be313624ea9">participantesIDs</a>;           </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_class" href="class_servidor.html">Servidor</a>(std::string <a class="code hl_variable" href="class_servidor.html#a1141e0835dfba56f4d01f922d2a8b34f">nome</a>, <span class="keywordtype">int</span> IDdono);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        std::string <a class="code hl_function" href="class_servidor.html#af094e7503c4fd8e124679f03eae3f0cd">getNome</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_servidor.html#a26b0bc0263c27380ced8b2357c757f4e">getIDdono</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_servidor.html#a4a232f83c626f7afcd98f1aeed5986f5">setDescricao</a>(std::string <a class="code hl_variable" href="class_servidor.html#a61fecd2b3435d7048d793741c5f3bfdf">descricao</a>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_servidor.html#a8baf111eee2d2a02017177cf9bb00f4c">setConvite</a>(std::string convite);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_servidor.html#aa6ada6483be372cfb824e6003a2c8e17">adicionaParticipante</a>(<span class="keywordtype">int</span> ID);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_servidor.html#a9ba47dfe5c573aeb3f56f934b697d1ba">usuarioParticipa</a>(<span class="keywordtype">int</span> ID);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_servidor.html#aa041eddfb316b9fe943f0cba978091c9">verificaConvite</a>(std::string convite);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_servidor.html#a8f8db1c0a2cecbb6cb59bf7caa035460">tamListaParticipantes</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_servidor.html#ac1224e90d1e17d155f946e6a0935c25c">IDparticipante</a>(<span class="keywordtype">int</span> indice);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_servidor_html"><div class="ttname"><a href="class_servidor.html">Servidor</a></div><div class="ttdoc">Classe que representa um servidor no sistema Concordo.</div><div class="ttdef"><b>Definição</b> Servidor.h:16</div></div>
+<div class="ttc" id="aclass_servidor_html_a1141e0835dfba56f4d01f922d2a8b34f"><div class="ttname"><a href="class_servidor.html#a1141e0835dfba56f4d01f922d2a8b34f">Servidor::nome</a></div><div class="ttdeci">std::string nome</div><div class="ttdef"><b>Definição</b> Servidor.h:19</div></div>
+<div class="ttc" id="aclass_servidor_html_a26b0bc0263c27380ced8b2357c757f4e"><div class="ttname"><a href="class_servidor.html#a26b0bc0263c27380ced8b2357c757f4e">Servidor::getIDdono</a></div><div class="ttdeci">int getIDdono()</div><div class="ttdoc">Obtém o ID do usuário dono do servidor.</div><div class="ttdef"><b>Definição</b> Servidor.cpp:13</div></div>
+<div class="ttc" id="aclass_servidor_html_a4a232f83c626f7afcd98f1aeed5986f5"><div class="ttname"><a href="class_servidor.html#a4a232f83c626f7afcd98f1aeed5986f5">Servidor::setDescricao</a></div><div class="ttdeci">void setDescricao(std::string descricao)</div><div class="ttdoc">Define a descrição do servidor.</div><div class="ttdef"><b>Definição</b> Servidor.cpp:17</div></div>
+<div class="ttc" id="aclass_servidor_html_a52c21983ad654fb7994dead4ae433e2c"><div class="ttname"><a href="class_servidor.html#a52c21983ad654fb7994dead4ae433e2c">Servidor::usuarioDonoId</a></div><div class="ttdeci">int usuarioDonoId</div><div class="ttdef"><b>Definição</b> Servidor.h:18</div></div>
+<div class="ttc" id="aclass_servidor_html_a61fecd2b3435d7048d793741c5f3bfdf"><div class="ttname"><a href="class_servidor.html#a61fecd2b3435d7048d793741c5f3bfdf">Servidor::descricao</a></div><div class="ttdeci">std::string descricao</div><div class="ttdef"><b>Definição</b> Servidor.h:20</div></div>
+<div class="ttc" id="aclass_servidor_html_a7448f419ead42bf7f0bd42d5bdc53ec6"><div class="ttname"><a href="class_servidor.html#a7448f419ead42bf7f0bd42d5bdc53ec6">Servidor::codigoConvite</a></div><div class="ttdeci">std::string codigoConvite</div><div class="ttdef"><b>Definição</b> Servidor.h:21</div></div>
+<div class="ttc" id="aclass_servidor_html_a8a6344bfd8fc30dda70fca49a9b7234f"><div class="ttname"><a href="class_servidor.html#a8a6344bfd8fc30dda70fca49a9b7234f">Servidor::canais</a></div><div class="ttdeci">std::vector&lt; Canal * &gt; canais</div><div class="ttdef"><b>Definição</b> Servidor.h:22</div></div>
+<div class="ttc" id="aclass_servidor_html_a8baf111eee2d2a02017177cf9bb00f4c"><div class="ttname"><a href="class_servidor.html#a8baf111eee2d2a02017177cf9bb00f4c">Servidor::setConvite</a></div><div class="ttdeci">void setConvite(std::string convite)</div><div class="ttdoc">Define o código de convite para o servidor.</div><div class="ttdef"><b>Definição</b> Servidor.cpp:21</div></div>
+<div class="ttc" id="aclass_servidor_html_a8f8db1c0a2cecbb6cb59bf7caa035460"><div class="ttname"><a href="class_servidor.html#a8f8db1c0a2cecbb6cb59bf7caa035460">Servidor::tamListaParticipantes</a></div><div class="ttdeci">int tamListaParticipantes()</div><div class="ttdoc">Obtém o tamanho da lista de participantes do servidor.</div><div class="ttdef"><b>Definição</b> Servidor.cpp:52</div></div>
+<div class="ttc" id="aclass_servidor_html_a9ba47dfe5c573aeb3f56f934b697d1ba"><div class="ttname"><a href="class_servidor.html#a9ba47dfe5c573aeb3f56f934b697d1ba">Servidor::usuarioParticipa</a></div><div class="ttdeci">bool usuarioParticipa(int ID)</div><div class="ttdoc">Verifica se um usuário é participante do servidor.</div><div class="ttdef"><b>Definição</b> Servidor.cpp:31</div></div>
+<div class="ttc" id="aclass_servidor_html_aa041eddfb316b9fe943f0cba978091c9"><div class="ttname"><a href="class_servidor.html#aa041eddfb316b9fe943f0cba978091c9">Servidor::verificaConvite</a></div><div class="ttdeci">bool verificaConvite(std::string convite)</div><div class="ttdoc">Verifica se um código de convite é válido para o servidor.</div><div class="ttdef"><b>Definição</b> Servidor.cpp:41</div></div>
+<div class="ttc" id="aclass_servidor_html_aa6ada6483be372cfb824e6003a2c8e17"><div class="ttname"><a href="class_servidor.html#aa6ada6483be372cfb824e6003a2c8e17">Servidor::adicionaParticipante</a></div><div class="ttdeci">void adicionaParticipante(int ID)</div><div class="ttdoc">Adiciona um participante ao servidor.</div><div class="ttdef"><b>Definição</b> Servidor.cpp:25</div></div>
+<div class="ttc" id="aclass_servidor_html_ac1224e90d1e17d155f946e6a0935c25c"><div class="ttname"><a href="class_servidor.html#ac1224e90d1e17d155f946e6a0935c25c">Servidor::IDparticipante</a></div><div class="ttdeci">int IDparticipante(int indice)</div><div class="ttdoc">Obtém o ID de um participante do servidor a partir de um índice.</div><div class="ttdef"><b>Definição</b> Servidor.cpp:56</div></div>
+<div class="ttc" id="aclass_servidor_html_ac26153c0e4ee691298741be313624ea9"><div class="ttname"><a href="class_servidor.html#ac26153c0e4ee691298741be313624ea9">Servidor::participantesIDs</a></div><div class="ttdeci">std::vector&lt; int &gt; participantesIDs</div><div class="ttdef"><b>Definição</b> Servidor.h:23</div></div>
+<div class="ttc" id="aclass_servidor_html_af094e7503c4fd8e124679f03eae3f0cd"><div class="ttname"><a href="class_servidor.html#af094e7503c4fd8e124679f03eae3f0cd">Servidor::getNome</a></div><div class="ttdeci">std::string getNome()</div><div class="ttdoc">Obtém o nome do servidor.</div><div class="ttdef"><b>Definição</b> Servidor.cpp:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>

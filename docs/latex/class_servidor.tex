@@ -1,0 +1,260 @@
+\doxysection{Referência da Classe Servidor}
+\hypertarget{class_servidor}{}\label{class_servidor}\index{Servidor@{Servidor}}
+
+
+Classe que representa um servidor no sistema Concordo.  
+
+
+
+
+{\ttfamily \#include $<$Servidor.\+h$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_servidor_aa3c5b7e131f50d31843e47623cb32d15}{Servidor}} (std\+::string \mbox{\hyperlink{class_servidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}}, int IDdono)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_servidor}{Servidor}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_servidor_af094e7503c4fd8e124679f03eae3f0cd}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome do servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_servidor_a26b0bc0263c27380ced8b2357c757f4e}{get\+IDdono}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o ID do usuário dono do servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servidor_a4a232f83c626f7afcd98f1aeed5986f5}{set\+Descricao}} (std\+::string \mbox{\hyperlink{class_servidor_a61fecd2b3435d7048d793741c5f3bfdf}{descricao}})
+\begin{DoxyCompactList}\small\item\em Define a descrição do servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servidor_a8baf111eee2d2a02017177cf9bb00f4c}{set\+Convite}} (std\+::string convite)
+\begin{DoxyCompactList}\small\item\em Define o código de convite para o servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servidor_aa6ada6483be372cfb824e6003a2c8e17}{adiciona\+Participante}} (int ID)
+\begin{DoxyCompactList}\small\item\em Adiciona um participante ao servidor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_servidor_a9ba47dfe5c573aeb3f56f934b697d1ba}{usuario\+Participa}} (int ID)
+\begin{DoxyCompactList}\small\item\em Verifica se um usuário é participante do servidor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_servidor_aa041eddfb316b9fe943f0cba978091c9}{verifica\+Convite}} (std\+::string convite)
+\begin{DoxyCompactList}\small\item\em Verifica se um código de convite é válido para o servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_servidor_a8f8db1c0a2cecbb6cb59bf7caa035460}{tam\+Lista\+Participantes}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o tamanho da lista de participantes do servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_servidor_ac1224e90d1e17d155f946e6a0935c25c}{IDparticipante}} (int indice)
+\begin{DoxyCompactList}\small\item\em Obtém o ID de um participante do servidor a partir de um índice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_servidor_a52c21983ad654fb7994dead4ae433e2c}{usuario\+Dono\+Id}}
+\item 
+std\+::string \mbox{\hyperlink{class_servidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}}
+\item 
+std\+::string \mbox{\hyperlink{class_servidor_a61fecd2b3435d7048d793741c5f3bfdf}{descricao}}
+\item 
+std\+::string \mbox{\hyperlink{class_servidor_a7448f419ead42bf7f0bd42d5bdc53ec6}{codigo\+Convite}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_canal}{Canal}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_servidor_a8a6344bfd8fc30dda70fca49a9b7234f}{canais}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_servidor_ac26153c0e4ee691298741be313624ea9}{participantes\+IDs}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa um servidor no sistema Concordo. 
+
+Esta classe representa um servidor no sistema Concordo, contendo informações sobre o usuário dono, o nome do servidor, descrição, código de convite e a lista de canais e participantes associados a ele. Ela oferece métodos para manipular essas informações, como definir a descrição, adicionar participantes, verificar convite e obter informações sobre o servidor. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_servidor_aa3c5b7e131f50d31843e47623cb32d15}\label{class_servidor_aa3c5b7e131f50d31843e47623cb32d15} 
+\index{Servidor@{Servidor}!Servidor@{Servidor}}
+\index{Servidor@{Servidor}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{Servidor()}{Servidor()}}
+{\footnotesize\ttfamily Servidor\+::\+Servidor (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{int}]{IDdono }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{class_servidor}{Servidor}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Nome do servidor \\
+\hline
+{\em IDdono} & ID do usuário dono do servidor \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_servidor_aa6ada6483be372cfb824e6003a2c8e17}\label{class_servidor_aa6ada6483be372cfb824e6003a2c8e17} 
+\index{Servidor@{Servidor}!adicionaParticipante@{adicionaParticipante}}
+\index{adicionaParticipante@{adicionaParticipante}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{adicionaParticipante()}{adicionaParticipante()}}
+{\footnotesize\ttfamily void Servidor\+::adiciona\+Participante (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+
+
+Adiciona um participante ao servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ID} & ID do participante a ser adicionado \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_servidor_a26b0bc0263c27380ced8b2357c757f4e}\label{class_servidor_a26b0bc0263c27380ced8b2357c757f4e} 
+\index{Servidor@{Servidor}!getIDdono@{getIDdono}}
+\index{getIDdono@{getIDdono}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getIDdono()}{getIDdono()}}
+{\footnotesize\ttfamily int Servidor\+::get\+IDdono (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o ID do usuário dono do servidor. 
+
+\begin{DoxyReturn}{Retorna}
+ID do usuário dono do servidor 
+\end{DoxyReturn}
+\Hypertarget{class_servidor_af094e7503c4fd8e124679f03eae3f0cd}\label{class_servidor_af094e7503c4fd8e124679f03eae3f0cd} 
+\index{Servidor@{Servidor}!getNome@{getNome}}
+\index{getNome@{getNome}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily std\+::string Servidor\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o nome do servidor. 
+
+\begin{DoxyReturn}{Retorna}
+Nome do servidor 
+\end{DoxyReturn}
+\Hypertarget{class_servidor_ac1224e90d1e17d155f946e6a0935c25c}\label{class_servidor_ac1224e90d1e17d155f946e6a0935c25c} 
+\index{Servidor@{Servidor}!IDparticipante@{IDparticipante}}
+\index{IDparticipante@{IDparticipante}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{IDparticipante()}{IDparticipante()}}
+{\footnotesize\ttfamily int Servidor\+::\+IDparticipante (\begin{DoxyParamCaption}\item[{int}]{indice }\end{DoxyParamCaption})}
+
+
+
+Obtém o ID de um participante do servidor a partir de um índice. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em indice} & Índice do participante na lista de participantes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+ID do participante 
+\end{DoxyReturn}
+\Hypertarget{class_servidor_a8baf111eee2d2a02017177cf9bb00f4c}\label{class_servidor_a8baf111eee2d2a02017177cf9bb00f4c} 
+\index{Servidor@{Servidor}!setConvite@{setConvite}}
+\index{setConvite@{setConvite}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{setConvite()}{setConvite()}}
+{\footnotesize\ttfamily void Servidor\+::set\+Convite (\begin{DoxyParamCaption}\item[{std\+::string}]{convite }\end{DoxyParamCaption})}
+
+
+
+Define o código de convite para o servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em convite} & Código de convite para o servidor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_servidor_a4a232f83c626f7afcd98f1aeed5986f5}\label{class_servidor_a4a232f83c626f7afcd98f1aeed5986f5} 
+\index{Servidor@{Servidor}!setDescricao@{setDescricao}}
+\index{setDescricao@{setDescricao}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{setDescricao()}{setDescricao()}}
+{\footnotesize\ttfamily void Servidor\+::set\+Descricao (\begin{DoxyParamCaption}\item[{std\+::string}]{descricao }\end{DoxyParamCaption})}
+
+
+
+Define a descrição do servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em descricao} & Descrição do servidor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_servidor_a8f8db1c0a2cecbb6cb59bf7caa035460}\label{class_servidor_a8f8db1c0a2cecbb6cb59bf7caa035460} 
+\index{Servidor@{Servidor}!tamListaParticipantes@{tamListaParticipantes}}
+\index{tamListaParticipantes@{tamListaParticipantes}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{tamListaParticipantes()}{tamListaParticipantes()}}
+{\footnotesize\ttfamily int Servidor\+::tam\+Lista\+Participantes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o tamanho da lista de participantes do servidor. 
+
+\begin{DoxyReturn}{Retorna}
+Tamanho da lista de participantes 
+\end{DoxyReturn}
+\Hypertarget{class_servidor_a9ba47dfe5c573aeb3f56f934b697d1ba}\label{class_servidor_a9ba47dfe5c573aeb3f56f934b697d1ba} 
+\index{Servidor@{Servidor}!usuarioParticipa@{usuarioParticipa}}
+\index{usuarioParticipa@{usuarioParticipa}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{usuarioParticipa()}{usuarioParticipa()}}
+{\footnotesize\ttfamily bool Servidor\+::usuario\+Participa (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+
+
+Verifica se um usuário é participante do servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ID} & ID do usuário a ser verificado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se o usuário é participante, false caso contrário 
+\end{DoxyReturn}
+\Hypertarget{class_servidor_aa041eddfb316b9fe943f0cba978091c9}\label{class_servidor_aa041eddfb316b9fe943f0cba978091c9} 
+\index{Servidor@{Servidor}!verificaConvite@{verificaConvite}}
+\index{verificaConvite@{verificaConvite}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{verificaConvite()}{verificaConvite()}}
+{\footnotesize\ttfamily bool Servidor\+::verifica\+Convite (\begin{DoxyParamCaption}\item[{std\+::string}]{convite }\end{DoxyParamCaption})}
+
+
+
+Verifica se um código de convite é válido para o servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em convite} & Código de convite a ser verificado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se o código é válido, false caso contrário 
+\end{DoxyReturn}
+
+
+\doxysubsection{Atributos}
+\Hypertarget{class_servidor_a8a6344bfd8fc30dda70fca49a9b7234f}\label{class_servidor_a8a6344bfd8fc30dda70fca49a9b7234f} 
+\index{Servidor@{Servidor}!canais@{canais}}
+\index{canais@{canais}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{canais}{canais}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_canal}{Canal}} \texorpdfstring{$\ast$}{*}$>$ Servidor\+::canais\hspace{0.3cm}{\ttfamily [private]}}
+
+Vetor de ponteiros para os canais do servidor \Hypertarget{class_servidor_a7448f419ead42bf7f0bd42d5bdc53ec6}\label{class_servidor_a7448f419ead42bf7f0bd42d5bdc53ec6} 
+\index{Servidor@{Servidor}!codigoConvite@{codigoConvite}}
+\index{codigoConvite@{codigoConvite}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{codigoConvite}{codigoConvite}}
+{\footnotesize\ttfamily std\+::string Servidor\+::codigo\+Convite\hspace{0.3cm}{\ttfamily [private]}}
+
+Código de convite para o servidor \Hypertarget{class_servidor_a61fecd2b3435d7048d793741c5f3bfdf}\label{class_servidor_a61fecd2b3435d7048d793741c5f3bfdf} 
+\index{Servidor@{Servidor}!descricao@{descricao}}
+\index{descricao@{descricao}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{descricao}{descricao}}
+{\footnotesize\ttfamily std\+::string Servidor\+::descricao\hspace{0.3cm}{\ttfamily [private]}}
+
+Descrição do servidor \Hypertarget{class_servidor_a1141e0835dfba56f4d01f922d2a8b34f}\label{class_servidor_a1141e0835dfba56f4d01f922d2a8b34f} 
+\index{Servidor@{Servidor}!nome@{nome}}
+\index{nome@{nome}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{nome}{nome}}
+{\footnotesize\ttfamily std\+::string Servidor\+::nome\hspace{0.3cm}{\ttfamily [private]}}
+
+Nome do servidor \Hypertarget{class_servidor_ac26153c0e4ee691298741be313624ea9}\label{class_servidor_ac26153c0e4ee691298741be313624ea9} 
+\index{Servidor@{Servidor}!participantesIDs@{participantesIDs}}
+\index{participantesIDs@{participantesIDs}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{participantesIDs}{participantesIDs}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Servidor\+::participantes\+IDs\hspace{0.3cm}{\ttfamily [private]}}
+
+Vetor de IDs dos participantes do servidor \Hypertarget{class_servidor_a52c21983ad654fb7994dead4ae433e2c}\label{class_servidor_a52c21983ad654fb7994dead4ae433e2c} 
+\index{Servidor@{Servidor}!usuarioDonoId@{usuarioDonoId}}
+\index{usuarioDonoId@{usuarioDonoId}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{usuarioDonoId}{usuarioDonoId}}
+{\footnotesize\ttfamily int Servidor\+::usuario\+Dono\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+ID do usuário dono do servidor 
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/Servidor.\+h\item 
+src/Servidor.\+cpp\end{DoxyCompactItemize}

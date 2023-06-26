@@ -2,6 +2,11 @@
 #include "Usuario.h"
 #include "Sistema.h"
 
+/**
+ * @brief Função principal do programa.
+ * 
+ * @return 0 se o programa for concluído com sucesso.
+ */
 int main() {
     Sistema s;
 
@@ -10,6 +15,8 @@ int main() {
     std::string email, senha, nome, descricao, convite;
 
     std::cout << "BEM-VINDO AO CONCORDO!!!\n";
+
+    // Loop principal do programa
     do {
         std::getline(std::cin, linha);
         std::size_t posPrimeiroEspaco = linha.find(' ');
@@ -22,6 +29,7 @@ int main() {
             comando = linha;
         }
 
+        // Verifica o comando digitado pelo usuário
         if(comando == "quit") {
             std::cout << "Saindo do Concordo\n";
         } else if (comando == "create-user") {
@@ -31,7 +39,8 @@ int main() {
                 senha = linha.substr(posSegundoEspaco + 1, posTerceiroEspaco - posSegundoEspaco - 1);
                 nome = linha.substr(posTerceiroEspaco + 1);
 
-            s.criarUsuario(email, senha, nome);        
+                // Cria um novo usuário
+                s.criarUsuario(email, senha, nome);        
 
             } else {
                 std::cout << "comando create-user com parametros invalidos!!!\n";
@@ -42,6 +51,7 @@ int main() {
                 email = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
                 senha = linha.substr(posSegundoEspaco + 1);
 
+                // Realiza o login do usuário
                 s.login(email, senha);
                 
             } else {
@@ -49,11 +59,13 @@ int main() {
             }
 
         } else if (comando == "disconnect") {
+           // Desconecta do Concordo
            s.disconectar();
         } else if (comando == "create-server"){
             if(posPrimeiroEspaco != std::string::npos) {
                 nome = linha.substr(posPrimeiroEspaco + 1);
 
+                // Cria um novo servidor
                 s.criarServidor(nome);
             } else {
                 std::cout << "comando create-server com parametros invalidos!!!\n";
@@ -62,6 +74,8 @@ int main() {
             if(posSegundoEspaco != std::string::npos) {
                 nome = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
                 descricao = linha.substr(posSegundoEspaco + 1);
+
+                // Define a descrição do servidor
                 s.mudarDescricaoServidor(nome, descricao);
             } else {
                 std::cout << "comando set-server-desc com parametros invalidos!!!\n";
@@ -76,15 +90,19 @@ int main() {
                     convite = "";
                 }
 
+                // Define o código de convite do servidor
                 s.setConvite(nome, convite);
             } else {
                 std::cout << "comando set-server-invite-code com parametros invalidos!!!\n";
             }
         } else if(comando == "list-servers") {
+            // Lista os servidores disponíveis
             s.listarServidores();
         } else if (comando == "remove-server"){
             if(posPrimeiroEspaco != std::string::npos) {
                 nome = linha.substr(posPrimeiroEspaco + 1);
+
+                // Remove um servidor
                 s.removerServidor(nome);
             } else {
                 std::cout << "comando remove-server com parametros invalidos!!!\n";
@@ -99,13 +117,16 @@ int main() {
                     convite = "";
                 }
 
+                // Entra em um servidor
                 s.entrarServidor(nome, convite);
             } else {
                 std::cout << "comando enter-server com parametros invalidos!!!\n";
             }
         } else if(comando == "leave-server") {
+            // Sai do servidor atual
             s.sairServidor();
         } else if(comando == "list-participants") {
+            // Lista os participantes do servidor atual
             s.listarParticipantes();
         } else {
             std::cout << "comando invalido!\n";
