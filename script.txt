@@ -1,0 +1,59 @@
+comando-invalido
+create-user sem_todos_parametros
+create-user email1 senha1 nome completo 1
+create-user email1 senha nome completo
+create-user email2 senha2 nome completo 2
+create-user email3 senha3 nome completo 3
+create-server servidor1
+enter-server servidor1
+login sem_todos_parametros
+login email1 senha1 parametro_a_mais
+login email_nao_existe senha
+login email1 senhaerrada
+login email1 senha1
+login email1 senha1
+create-server
+create-server servidor1 parametro_a_mais
+create-server servidor1
+create-server servidor1
+create-server servidor2
+create-server servidor3
+set-server-desc
+set-server-desc servidor1 descrição sem aspas
+set-server-desc servidor1 "descrição sem aspas
+set-server-desc servidor1 "descrição com aspas" parametro_a_mais
+set-server-desc servidor_nao_existe "descrição completa dentro de aspas"
+set-server-desc servidor1 "descrição completa dentro de aspas"
+set-server-invite-code servidor_nao_existe
+set-server-invite-code servidor1 1234 parametro_a_mais
+set-server-invite-code servidor1 1234
+list-servers
+remove-server servidor_nao_existe
+remove-server servidor3
+disconnect
+disconnect
+login email2 senha2
+list-servers
+enter-server servidor_nao_existe
+enter-server servidor2
+enter-server servidor2
+leave-server
+enter-server servidor1
+enter-server servidor1 convite_errado
+enter-server servidor1 1234
+disconnect
+login email3 senha3
+list-servers
+set-server-desc servidor1 "mudando a descricao de um servidor de outra pessoa"
+set-server-invite-code servidor1 codigoConvite
+enter-server servidor2
+list-participants
+leave-server
+enter-server servidor1
+disconnect
+login email1 senha1
+set-server-invite-code servidor1
+disconnect
+login email3 senha3
+enter-server servidor1
+quit

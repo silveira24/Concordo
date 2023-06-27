@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "Usuario.h"
 #include "Sistema.h"
 
@@ -93,7 +94,7 @@ int main() {
                 std::cout << "comando set-server-desc com parametros invalidos!!!\n";
             }
         } else if(comando == "set-server-invite-code") {
-            if(posPrimeiroEspaco != std::string::npos && posTerceiroEspaco == std::string::npos) {
+            if(posPrimeiroEspaco != std::string::npos && (posTerceiroEspaco == std::string::npos || posSegundoEspaco == std::string::npos)) {
                 if(posSegundoEspaco != std::string::npos) {
                     nome = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
                     convite = linha.substr(posSegundoEspaco + 1);
@@ -124,7 +125,7 @@ int main() {
                 std::cout << "comando remove-server com parametros invalidos!!!\n";
             }
         } else if (comando == "enter-server"){
-            if(posPrimeiroEspaco != std::string::npos && posTerceiroEspaco == std::string::npos) {
+            if(posPrimeiroEspaco != std::string::npos && (posTerceiroEspaco == std::string::npos || posSegundoEspaco == std::string::npos)) {
                 if(posSegundoEspaco != std::string::npos){
                     nome = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
                     convite = linha.substr(posSegundoEspaco + 1);

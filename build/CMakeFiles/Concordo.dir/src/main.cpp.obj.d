@@ -100,6 +100,11 @@ CMakeFiles/Concordo.dir/src/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ostream.tcc \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\istream \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\istream.tcc \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\fstream \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\codecvt.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\basic_file.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\c++io.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\fstream.tcc \
  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Usuario.h \
  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Sistema.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\vector \

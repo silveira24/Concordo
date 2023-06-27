@@ -95,7 +95,7 @@ void Sistema::disconectar() {
 }
 
 void Sistema::criarServidor(std::string nome) {
-    if(this->estado == "logado") {
+    if(this->estado != "deslogado") {
         if(!this->serverExiste(nome)){
             Servidor s(nome, this->IDuserLogado);
             s.adicionaParticipante(this->IDuserLogado);
@@ -110,7 +110,7 @@ void Sistema::criarServidor(std::string nome) {
 }
 
 void Sistema::mudarDescricaoServidor(std::string nomeServidor, std::string descricao) {
-    if (this->estado == "logado") {
+    if (this->estado != "deslogado") {
         if(this->serverExiste(nomeServidor)){
             int indice = this->retornaIndiceServidor(nomeServidor);
             if(this->IDuserLogado == this->servidores[indice].getIDdono()){
@@ -129,7 +129,7 @@ void Sistema::mudarDescricaoServidor(std::string nomeServidor, std::string descr
 }
 
 void Sistema::setConvite(std::string nomeServidor, std::string convite) {
-    if(this->estado == "logado") {
+    if(this->estado != "deslogado") {
         if(this->serverExiste(nomeServidor)){
             int indice = this->retornaIndiceServidor(nomeServidor);
             if(this->IDuserLogado == this->servidores[indice].getIDdono()){
@@ -140,7 +140,7 @@ void Sistema::setConvite(std::string nomeServidor, std::string convite) {
                     std::cout << "Codigo de convite do servidor " << nomeServidor << " removido!\n";
                 }
             } else {
-                std::cout << "Voce nao pode alterar a descricao de um servidor que nao foi criado por voce\n";
+                std::cout << "Voce nao pode alterar o codigo de convite de um servidor que nao foi criado por voce\n";
             }
         } else {
             std::cout << "Servidor " << nomeServidor << " nao existe!\n";
@@ -151,7 +151,7 @@ void Sistema::setConvite(std::string nomeServidor, std::string convite) {
 }
 
 void Sistema::listarServidores() {
-    if(this->estado == "logado"){
+    if(this->estado != "deslogado"){
         for(int i = 0; i < this->servidores.size(); i++) {
             std::cout << this->servidores[i].getNome() << std::endl;
         }
@@ -161,7 +161,7 @@ void Sistema::listarServidores() {
 }
 
 void Sistema::removerServidor(std::string nome) {
-    if(this->estado == "logado"){
+    if(this->estado != "deslogado"){
         if(this->serverExiste(nome)) {
             int indice = this->retornaIndiceServidor(nome);
             if(this->servidores[indice].getIDdono() == this->IDuserLogado) {
