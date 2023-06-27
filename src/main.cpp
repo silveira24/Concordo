@@ -31,7 +31,12 @@ int main() {
 
         // Verifica o comando digitado pelo usuário
         if(comando == "quit") {
-            std::cout << "Saindo do Concordo\n";
+            if(posPrimeiroEspaco == std::string::npos){
+                std::cout << "Saindo do Concordo\n";
+            } else {
+                std::cout << "comando quit com parametros invalidos!!!\n";
+                comando = "";
+            }
         } else if (comando == "create-user") {
             
             if(posSegundoEspaco != std::string::npos && posTerceiroEspaco != std::string::npos) {
@@ -47,7 +52,7 @@ int main() {
             }
                        
         } else if (comando == "login") {
-            if(posSegundoEspaco != std::string::npos) {
+            if(posSegundoEspaco != std::string::npos && posTerceiroEspaco == std::string::npos) {
                 email = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
                 senha = linha.substr(posSegundoEspaco + 1);
 
@@ -60,9 +65,13 @@ int main() {
 
         } else if (comando == "disconnect") {
            // Desconecta do Concordo
-           s.disconectar();
+            if(posPrimeiroEspaco == std::string::npos) {
+                s.disconectar();
+            } else {
+                std::cout << "comando disconnect com parametros invalidos!!!\n";
+            }
         } else if (comando == "create-server"){
-            if(posPrimeiroEspaco != std::string::npos) {
+            if(posPrimeiroEspaco != std::string::npos && posSegundoEspaco == std::string::npos) {
                 nome = linha.substr(posPrimeiroEspaco + 1);
 
                 // Cria um novo servidor
@@ -71,7 +80,10 @@ int main() {
                 std::cout << "comando create-server com parametros invalidos!!!\n";
             }
         } else if(comando == "set-server-desc") {
-            if(posSegundoEspaco != std::string::npos) {
+            std::size_t posPrimeiraAspa = linha.find('\"');
+            std::size_t posSegundaAspa = linha.find('\"', posPrimeiraAspa + 1);
+            std::string resto = linha.substr(posSegundaAspa + 1);
+            if(posSegundoEspaco != std::string::npos && posPrimeiraAspa != std::string::npos && posSegundaAspa != std::string::npos && resto == "") {
                 nome = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
                 descricao = linha.substr(posSegundoEspaco + 1);
 
@@ -81,7 +93,7 @@ int main() {
                 std::cout << "comando set-server-desc com parametros invalidos!!!\n";
             }
         } else if(comando == "set-server-invite-code") {
-            if(posPrimeiroEspaco != std::string::npos) {
+            if(posPrimeiroEspaco != std::string::npos && posTerceiroEspaco == std::string::npos) {
                 if(posSegundoEspaco != std::string::npos) {
                     nome = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
                     convite = linha.substr(posSegundoEspaco + 1);
@@ -97,9 +109,13 @@ int main() {
             }
         } else if(comando == "list-servers") {
             // Lista os servidores disponíveis
-            s.listarServidores();
+            if(posPrimeiroEspaco == std::string::npos){
+                s.listarServidores();
+            } else {
+                std::cout << "comando list-servers com parametros invalidos!!!\n";
+            }
         } else if (comando == "remove-server"){
-            if(posPrimeiroEspaco != std::string::npos) {
+            if(posPrimeiroEspaco != std::string::npos && posSegundoEspaco == std::string::npos) {
                 nome = linha.substr(posPrimeiroEspaco + 1);
 
                 // Remove um servidor
@@ -108,7 +124,7 @@ int main() {
                 std::cout << "comando remove-server com parametros invalidos!!!\n";
             }
         } else if (comando == "enter-server"){
-            if(posPrimeiroEspaco != std::string::npos) {
+            if(posPrimeiroEspaco != std::string::npos && posTerceiroEspaco == std::string::npos) {
                 if(posSegundoEspaco != std::string::npos){
                     nome = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
                     convite = linha.substr(posSegundoEspaco + 1);
@@ -124,10 +140,18 @@ int main() {
             }
         } else if(comando == "leave-server") {
             // Sai do servidor atual
-            s.sairServidor();
+            if(posPrimeiroEspaco == std::string::npos) {
+                s.sairServidor();
+            } else {
+                std::cout << "comando leave-server com parametros invalidos!!!\n";
+            }
         } else if(comando == "list-participants") {
             // Lista os participantes do servidor atual
-            s.listarParticipantes();
+            if(posPrimeiroEspaco == std::string::npos) {
+                s.listarParticipantes();
+            } else {
+                std::cout << "comando list-participants com parametros invalidos!!!\n";
+            }
         } else {
             std::cout << "comando invalido!\n";
         }

@@ -14,7 +14,7 @@
  * Ela permite criar usuários, criar servidores, gerenciar participantes, realizar login e muito mais.
  */
 class Sistema {
-public:
+private:
     std::vector<Usuario> usuarios; /**< Vetor de usuários registrados no sistema. */
     std::vector<Servidor> servidores; /**< Vetor de servidores criados no sistema. */
     int IDuserLogado; /**< ID do usuário logado atualmente. */
