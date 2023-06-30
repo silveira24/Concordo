@@ -6,6 +6,13 @@ Servidor::Servidor(std::string nome, int IDdono){
     this->codigoConvite = "";
 }
 
+Servidor::~Servidor() {
+    while(this->canais.size() != 0){
+        delete this->canais[0];
+        this->canais.erase(this->canais.begin()); 
+    }
+}
+
 std::string Servidor::getNome(){
     return this->nome;
 }
@@ -55,4 +62,23 @@ int Servidor::tamListaParticipantes() {
 
 int Servidor::IDparticipante(int indice) {
     return this->participantesIDs[indice];
+}
+
+bool Servidor::existeCanal(std::string nome, std::string tipo) {
+    for(int i = 0; i < this->canais.size(); i++){
+        if(this->canais[i]->getNome() == nome && this->canais[i]->getTipo() == tipo) {
+            return true;
+        }
+    }
+    return false;
+}
+
+void Servidor::criarCanal(std::string nome, std::string tipo) {
+    if(tipo == "texto") {
+        CanalTexto* canal = new CanalTexto(nome);
+        this->canais.push_back(canal);
+    } else if(tipo == "voz") {
+        CanalVoz* canal = new CanalVoz(nome);
+        this->canais.push_back(canal);
+    }  
 }

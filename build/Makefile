@@ -128,6 +128,102 @@ Concordo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/build
 .PHONY : Concordo/fast
 
+src/Canal.obj: src/Canal.cpp.obj
+.PHONY : src/Canal.obj
+
+# target to build an object file
+src/Canal.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/src/Canal.cpp.obj
+.PHONY : src/Canal.cpp.obj
+
+src/Canal.i: src/Canal.cpp.i
+.PHONY : src/Canal.i
+
+# target to preprocess a source file
+src/Canal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/src/Canal.cpp.i
+.PHONY : src/Canal.cpp.i
+
+src/Canal.s: src/Canal.cpp.s
+.PHONY : src/Canal.s
+
+# target to generate assembly for a file
+src/Canal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/src/Canal.cpp.s
+.PHONY : src/Canal.cpp.s
+
+src/CanalTexto.obj: src/CanalTexto.cpp.obj
+.PHONY : src/CanalTexto.obj
+
+# target to build an object file
+src/CanalTexto.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/src/CanalTexto.cpp.obj
+.PHONY : src/CanalTexto.cpp.obj
+
+src/CanalTexto.i: src/CanalTexto.cpp.i
+.PHONY : src/CanalTexto.i
+
+# target to preprocess a source file
+src/CanalTexto.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/src/CanalTexto.cpp.i
+.PHONY : src/CanalTexto.cpp.i
+
+src/CanalTexto.s: src/CanalTexto.cpp.s
+.PHONY : src/CanalTexto.s
+
+# target to generate assembly for a file
+src/CanalTexto.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/src/CanalTexto.cpp.s
+.PHONY : src/CanalTexto.cpp.s
+
+src/CanalVoz.obj: src/CanalVoz.cpp.obj
+.PHONY : src/CanalVoz.obj
+
+# target to build an object file
+src/CanalVoz.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/src/CanalVoz.cpp.obj
+.PHONY : src/CanalVoz.cpp.obj
+
+src/CanalVoz.i: src/CanalVoz.cpp.i
+.PHONY : src/CanalVoz.i
+
+# target to preprocess a source file
+src/CanalVoz.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/src/CanalVoz.cpp.i
+.PHONY : src/CanalVoz.cpp.i
+
+src/CanalVoz.s: src/CanalVoz.cpp.s
+.PHONY : src/CanalVoz.s
+
+# target to generate assembly for a file
+src/CanalVoz.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/src/CanalVoz.cpp.s
+.PHONY : src/CanalVoz.cpp.s
+
+src/Mensagem.obj: src/Mensagem.cpp.obj
+.PHONY : src/Mensagem.obj
+
+# target to build an object file
+src/Mensagem.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/src/Mensagem.cpp.obj
+.PHONY : src/Mensagem.cpp.obj
+
+src/Mensagem.i: src/Mensagem.cpp.i
+.PHONY : src/Mensagem.i
+
+# target to preprocess a source file
+src/Mensagem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/src/Mensagem.cpp.i
+.PHONY : src/Mensagem.cpp.i
+
+src/Mensagem.s: src/Mensagem.cpp.s
+.PHONY : src/Mensagem.s
+
+# target to generate assembly for a file
+src/Mensagem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concordo.dir\build.make CMakeFiles/Concordo.dir/src/Mensagem.cpp.s
+.PHONY : src/Mensagem.cpp.s
+
 src/Servidor.obj: src/Servidor.cpp.obj
 .PHONY : src/Servidor.obj
 
@@ -233,6 +329,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Concordo
+	@echo ... src/Canal.obj
+	@echo ... src/Canal.i
+	@echo ... src/Canal.s
+	@echo ... src/CanalTexto.obj
+	@echo ... src/CanalTexto.i
+	@echo ... src/CanalTexto.s
+	@echo ... src/CanalVoz.obj
+	@echo ... src/CanalVoz.i
+	@echo ... src/CanalVoz.s
+	@echo ... src/Mensagem.obj
+	@echo ... src/Mensagem.i
+	@echo ... src/Mensagem.s
 	@echo ... src/Servidor.obj
 	@echo ... src/Servidor.i
 	@echo ... src/Servidor.s

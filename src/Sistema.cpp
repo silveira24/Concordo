@@ -223,3 +223,24 @@ void Sistema::listarParticipantes() {
         std::cout << "voce nao esta visualizando nenhum servidor!\n";
     }
 }
+
+void Sistema::criarCanalServidorAtual(std::string nome, std::string tipo){
+    if(this->estado == "servidor") {
+        if(tipo == "voz" || tipo == "texto") {
+            if(!this->servidores[this->indiceServerAtual].existeCanal(nome, tipo)){
+                this->servidores[this->indiceServerAtual].criarCanal(nome, tipo);
+                std::cout << "Canal de " << tipo << " '" << nome << "' criado!\n";
+            } else {
+                if(tipo == "texto") {
+                    std::cout << "canal de texto '" << nome << "' ja existe!\n";
+                } else {
+                    std::cout << "canal de voz '" << nome << "' ja existe!\n";
+                }
+            }
+        } else {   
+            std::cout << "tipo de canal inválido!\n";
+        }
+    } else {
+        std::cout << "voce precisa estar visualizando um servidor para criar um canal nele!\n";
+    }
+}

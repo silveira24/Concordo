@@ -10,7 +10,11 @@ set(SOURCES
 src/main.cpp 
 src/Usuario.cpp
 src/Sistema.cpp
-src/Servidor.cpp)
+src/Servidor.cpp
+src/Canal.cpp
+src/CanalVoz.cpp
+src/CanalTexto.cpp
+src/Mensagem.cpp)
 
 # Defina o executável e especifique os arquivos de origem
 add_executable(Concordo ${SOURCES})

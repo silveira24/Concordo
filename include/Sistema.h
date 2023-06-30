@@ -117,6 +117,14 @@ public:
      * @brief Lista os participantes do servidor atual.
      */
     void listarParticipantes();
+
+    /**
+     * @brief Cria um canal novo no servidor atual.
+     * @param nome O nome do canal a ser criado.
+     * @param tipo O tipo do cana a ser criado (de voz ou de texto).
+     */
+
+    void criarCanalServidorAtual(std::string nome, std::string tipo);
 };
 
 #endif

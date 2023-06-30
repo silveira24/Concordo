@@ -13,7 +13,7 @@ int main() {
 
     std::string linha;
     std::string comando;
-    std::string email, senha, nome, descricao, convite;
+    std::string email, senha, nome, descricao, convite, tipo;
 
     std::cout << "BEM-VINDO AO CONCORDO!!!\n";
 
@@ -152,6 +152,15 @@ int main() {
                 s.listarParticipantes();
             } else {
                 std::cout << "comando list-participants com parametros invalidos!!!\n";
+            }
+        } else if(comando == "create-channel") {
+            if(posSegundoEspaco != std::string::npos && posTerceiroEspaco == std::string::npos) {
+                nome = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
+                tipo = linha.substr(posSegundoEspaco + 1);
+
+                s.criarCanalServidorAtual(nome, tipo);
+            } else {
+                std::cout << "comando create-channel com parametros invalidos!!!\n";
             }
         } else {
             std::cout << "comando invalido!\n";

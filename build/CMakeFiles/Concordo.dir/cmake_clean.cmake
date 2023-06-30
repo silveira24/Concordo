@@ -1,4 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Concordo.dir/src/Canal.cpp.obj"
+  "CMakeFiles/Concordo.dir/src/Canal.cpp.obj.d"
+  "CMakeFiles/Concordo.dir/src/CanalTexto.cpp.obj"
+  "CMakeFiles/Concordo.dir/src/CanalTexto.cpp.obj.d"
+  "CMakeFiles/Concordo.dir/src/CanalVoz.cpp.obj"
+  "CMakeFiles/Concordo.dir/src/CanalVoz.cpp.obj.d"
+  "CMakeFiles/Concordo.dir/src/Mensagem.cpp.obj"
+  "CMakeFiles/Concordo.dir/src/Mensagem.cpp.obj.d"
   "CMakeFiles/Concordo.dir/src/Servidor.cpp.obj"
   "CMakeFiles/Concordo.dir/src/Servidor.cpp.obj.d"
   "CMakeFiles/Concordo.dir/src/Sistema.cpp.obj"

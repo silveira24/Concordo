@@ -3,7 +3,9 @@
 
 #include <string>
 #include <vector>
-#include "Canal.h"
+#include "CanalTexto.h"
+#include "CanalVoz.h"
+
 
 /**
  * @brief Classe que representa um servidor no sistema Concordo.
@@ -29,6 +31,8 @@ class Servidor {
          * @param IDdono ID do usuário dono do servidor
          */
         Servidor(std::string nome, int IDdono);
+
+        ~Servidor();
 
         /**
          * @brief Obtém o nome do servidor
@@ -86,6 +90,10 @@ class Servidor {
          * @return ID do participante
          */
         int IDparticipante(int indice);
+
+        bool existeCanal(std::string nome, std::string tipo);
+
+        void criarCanal(std::string nome, std::string tipo);
 };
 
 #endif

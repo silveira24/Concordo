@@ -128,12 +128,76 @@ CMakeFiles/Concordo.dir/src/Servidor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Concordo.dir/src/Servidor.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\src\Servidor.cpp" -o CMakeFiles\Concordo.dir\src\Servidor.cpp.s
 
+CMakeFiles/Concordo.dir/src/Canal.cpp.obj: CMakeFiles/Concordo.dir/flags.make
+CMakeFiles/Concordo.dir/src/Canal.cpp.obj: CMakeFiles/Concordo.dir/includes_CXX.rsp
+CMakeFiles/Concordo.dir/src/Canal.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/src/Canal.cpp
+CMakeFiles/Concordo.dir/src/Canal.cpp.obj: CMakeFiles/Concordo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Concordo.dir/src/Canal.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Concordo.dir/src/Canal.cpp.obj -MF CMakeFiles\Concordo.dir\src\Canal.cpp.obj.d -o CMakeFiles\Concordo.dir\src\Canal.cpp.obj -c "D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\src\Canal.cpp"
+
+CMakeFiles/Concordo.dir/src/Canal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Concordo.dir/src/Canal.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\src\Canal.cpp" > CMakeFiles\Concordo.dir\src\Canal.cpp.i
+
+CMakeFiles/Concordo.dir/src/Canal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Concordo.dir/src/Canal.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\src\Canal.cpp" -o CMakeFiles\Concordo.dir\src\Canal.cpp.s
+
+CMakeFiles/Concordo.dir/src/CanalVoz.cpp.obj: CMakeFiles/Concordo.dir/flags.make
+CMakeFiles/Concordo.dir/src/CanalVoz.cpp.obj: CMakeFiles/Concordo.dir/includes_CXX.rsp
+CMakeFiles/Concordo.dir/src/CanalVoz.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/src/CanalVoz.cpp
+CMakeFiles/Concordo.dir/src/CanalVoz.cpp.obj: CMakeFiles/Concordo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Concordo.dir/src/CanalVoz.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Concordo.dir/src/CanalVoz.cpp.obj -MF CMakeFiles\Concordo.dir\src\CanalVoz.cpp.obj.d -o CMakeFiles\Concordo.dir\src\CanalVoz.cpp.obj -c "D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\src\CanalVoz.cpp"
+
+CMakeFiles/Concordo.dir/src/CanalVoz.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Concordo.dir/src/CanalVoz.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\src\CanalVoz.cpp" > CMakeFiles\Concordo.dir\src\CanalVoz.cpp.i
+
+CMakeFiles/Concordo.dir/src/CanalVoz.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Concordo.dir/src/CanalVoz.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\src\CanalVoz.cpp" -o CMakeFiles\Concordo.dir\src\CanalVoz.cpp.s
+
+CMakeFiles/Concordo.dir/src/CanalTexto.cpp.obj: CMakeFiles/Concordo.dir/flags.make
+CMakeFiles/Concordo.dir/src/CanalTexto.cpp.obj: CMakeFiles/Concordo.dir/includes_CXX.rsp
+CMakeFiles/Concordo.dir/src/CanalTexto.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/src/CanalTexto.cpp
+CMakeFiles/Concordo.dir/src/CanalTexto.cpp.obj: CMakeFiles/Concordo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Concordo.dir/src/CanalTexto.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Concordo.dir/src/CanalTexto.cpp.obj -MF CMakeFiles\Concordo.dir\src\CanalTexto.cpp.obj.d -o CMakeFiles\Concordo.dir\src\CanalTexto.cpp.obj -c "D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\src\CanalTexto.cpp"
+
+CMakeFiles/Concordo.dir/src/CanalTexto.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Concordo.dir/src/CanalTexto.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\src\CanalTexto.cpp" > CMakeFiles\Concordo.dir\src\CanalTexto.cpp.i
+
+CMakeFiles/Concordo.dir/src/CanalTexto.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Concordo.dir/src/CanalTexto.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\src\CanalTexto.cpp" -o CMakeFiles\Concordo.dir\src\CanalTexto.cpp.s
+
+CMakeFiles/Concordo.dir/src/Mensagem.cpp.obj: CMakeFiles/Concordo.dir/flags.make
+CMakeFiles/Concordo.dir/src/Mensagem.cpp.obj: CMakeFiles/Concordo.dir/includes_CXX.rsp
+CMakeFiles/Concordo.dir/src/Mensagem.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/src/Mensagem.cpp
+CMakeFiles/Concordo.dir/src/Mensagem.cpp.obj: CMakeFiles/Concordo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Concordo.dir/src/Mensagem.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Concordo.dir/src/Mensagem.cpp.obj -MF CMakeFiles\Concordo.dir\src\Mensagem.cpp.obj.d -o CMakeFiles\Concordo.dir\src\Mensagem.cpp.obj -c "D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\src\Mensagem.cpp"
+
+CMakeFiles/Concordo.dir/src/Mensagem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Concordo.dir/src/Mensagem.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\src\Mensagem.cpp" > CMakeFiles\Concordo.dir\src\Mensagem.cpp.i
+
+CMakeFiles/Concordo.dir/src/Mensagem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Concordo.dir/src/Mensagem.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\src\Mensagem.cpp" -o CMakeFiles\Concordo.dir\src\Mensagem.cpp.s
+
 # Object files for target Concordo
 Concordo_OBJECTS = \
 "CMakeFiles/Concordo.dir/src/main.cpp.obj" \
 "CMakeFiles/Concordo.dir/src/Usuario.cpp.obj" \
 "CMakeFiles/Concordo.dir/src/Sistema.cpp.obj" \
-"CMakeFiles/Concordo.dir/src/Servidor.cpp.obj"
+"CMakeFiles/Concordo.dir/src/Servidor.cpp.obj" \
+"CMakeFiles/Concordo.dir/src/Canal.cpp.obj" \
+"CMakeFiles/Concordo.dir/src/CanalVoz.cpp.obj" \
+"CMakeFiles/Concordo.dir/src/CanalTexto.cpp.obj" \
+"CMakeFiles/Concordo.dir/src/Mensagem.cpp.obj"
 
 # External object files for target Concordo
 Concordo_EXTERNAL_OBJECTS =
@@ -142,11 +206,15 @@ Concordo.exe: CMakeFiles/Concordo.dir/src/main.cpp.obj
 Concordo.exe: CMakeFiles/Concordo.dir/src/Usuario.cpp.obj
 Concordo.exe: CMakeFiles/Concordo.dir/src/Sistema.cpp.obj
 Concordo.exe: CMakeFiles/Concordo.dir/src/Servidor.cpp.obj
+Concordo.exe: CMakeFiles/Concordo.dir/src/Canal.cpp.obj
+Concordo.exe: CMakeFiles/Concordo.dir/src/CanalVoz.cpp.obj
+Concordo.exe: CMakeFiles/Concordo.dir/src/CanalTexto.cpp.obj
+Concordo.exe: CMakeFiles/Concordo.dir/src/Mensagem.cpp.obj
 Concordo.exe: CMakeFiles/Concordo.dir/build.make
 Concordo.exe: CMakeFiles/Concordo.dir/linkLibs.rsp
 Concordo.exe: CMakeFiles/Concordo.dir/objects1.rsp
 Concordo.exe: CMakeFiles/Concordo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Concordo.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="D:\Meus Documentos\docs\Ufrn\LP1 - Sidemar\Concordo\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Concordo.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Concordo.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

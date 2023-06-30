@@ -1,6 +1,7 @@
-CMakeFiles/Concordo.dir/src/Servidor.cpp.obj: \
- D:\Meus\ Documentos\docs\Ufrn\LP1\ -\ Sidemar\Concordo\src\Servidor.cpp \
- D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Servidor.h \
+CMakeFiles/Concordo.dir/src/CanalVoz.cpp.obj: \
+ D:\Meus\ Documentos\docs\Ufrn\LP1\ -\ Sidemar\Concordo\src\CanalVoz.cpp \
+ D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalVoz.h \
+ D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/canal.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\c++config.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\os_defines.h \
@@ -79,13 +80,10 @@ CMakeFiles/Concordo.dir/src/Servidor.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\functional_hash.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\hash_bytes.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.tcc \
+ D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Mensagem.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\vector \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_construct.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_uninitialized.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_vector.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_bvector.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\vector.tcc \
- D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalTexto.h \
- D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/canal.h \
- D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Mensagem.h \
- D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalVoz.h
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\vector.tcc
