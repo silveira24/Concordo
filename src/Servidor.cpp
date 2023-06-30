@@ -73,6 +73,15 @@ bool Servidor::existeCanal(std::string nome, std::string tipo) {
     return false;
 }
 
+int Servidor::retornaIndiceCanal(std::string nome, std::string tipo) {
+    for(int i = 0; i < this->canais.size(); i++){
+        if(this->canais[i]->getNome() == nome && this->canais[i]->getTipo() == tipo) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 void Servidor::criarCanal(std::string nome, std::string tipo) {
     if(tipo == "texto") {
         CanalTexto* canal = new CanalTexto(nome);
@@ -81,4 +90,20 @@ void Servidor::criarCanal(std::string nome, std::string tipo) {
         CanalVoz* canal = new CanalVoz(nome);
         this->canais.push_back(canal);
     }  
+}
+
+void Servidor::listarCanais() {
+    std::cout << "#canais de texto\n";
+    for(int i = 0; i < this->canais.size(); i++) {
+        if(this->canais[i]->getTipo() == "texto") {
+            std::cout << this->canais[i]->getNome() << std::endl;
+        }
+    }
+
+    std::cout << "#canais de audio\n";
+    for(int i = 0; i < this->canais.size(); i++) {
+        if(this->canais[i]->getTipo() == "voz") {
+            std::cout << this->canais[i]->getNome() << std::endl;
+        }
+    }
 }

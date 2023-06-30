@@ -244,3 +244,41 @@ void Sistema::criarCanalServidorAtual(std::string nome, std::string tipo){
         std::cout << "voce precisa estar visualizando um servidor para criar um canal nele!\n";
     }
 }
+
+void Sistema::listarCanaisServidorAtual() {
+    if(this->estado == "servidor") {
+        this->servidores[this->indiceServerAtual].listarCanais();
+    } else {
+        std::cout << "voce precisa estar visualizando um servidor para listar seus canais!\n";
+    }
+}
+
+void Sistema::entrarCanal(std::string nome, std::string tipo) {
+    if(this->estado == "servidor") {
+        if(tipo == "voz" || tipo == "texto") {
+            if(this->servidores[this->indiceServerAtual].existeCanal(nome, tipo)) {
+                this->estado = "canal";
+                this->indiceCanalAtual = this->servidores[this->indiceServerAtual].retornaIndiceCanal(nome, tipo);
+                std::cout << "Entrou no canal de " << tipo << " '" << nome << "'!\n";
+            } else {
+                std::cout << "canal de " << tipo << " '" << nome << "' nao existe!\n";
+            }
+        } else {
+            std::cout << "tipo de canal inválido!\n";
+        }
+    } else if (this->estado == "canal") {
+        std::cout << "voce ja esta visualiazando um canal!\n";
+    } else {
+        std::cout << "voce precisa estar visualizando um servidor para entrar em um de seus canais!\n";
+    }
+}
+
+void Sistema::sairCanal() {
+    if(this->estado == "canal") {
+        std::cout << "saindo do canal...\n";
+        this->estado = "servidor";
+        this->indiceCanalAtual = -1;
+    } else {
+        std::cout << "voce precisa estar visualizando um canal para sair dele!\n";
+    }
+}

@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <iostream>
 #include "CanalTexto.h"
 #include "CanalVoz.h"
 
@@ -93,7 +94,12 @@ class Servidor {
 
         bool existeCanal(std::string nome, std::string tipo);
 
+        int retornaIndiceCanal(std::string nome, std::string tipo);
+
         void criarCanal(std::string nome, std::string tipo);
+
+        void listarCanais();
+
 };
 
 #endif

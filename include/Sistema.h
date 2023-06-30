@@ -19,7 +19,7 @@ private:
     std::vector<Servidor> servidores; /**< Vetor de servidores criados no sistema. */
     int IDuserLogado; /**< ID do usuário logado atualmente. */
     int indiceServerAtual; /**< Índice do servidor atualmente selecionado. */
-    std::string nomeCanalAtual; /**< Nome do canal atualmente selecionado. */
+    int indiceCanalAtual; /**< Nome do canal atualmente selecionado. */
     int contID; /**< Contador de IDs de usuários. */
     std::string estado; /**< Estado do sistema (deslogado, logado, em um servidor, ou em um canal). */
 
@@ -125,6 +125,12 @@ public:
      */
 
     void criarCanalServidorAtual(std::string nome, std::string tipo);
+
+    void listarCanaisServidorAtual();
+
+    void entrarCanal(std::string nome, std::string tipo);
+
+    void sairCanal();
 };
 
 #endif

@@ -162,6 +162,27 @@ int main() {
             } else {
                 std::cout << "comando create-channel com parametros invalidos!!!\n";
             }
+        } else if(comando == "list-channels") {
+            if(posPrimeiroEspaco == std::string::npos) {
+                s.listarCanaisServidorAtual();
+            } else {
+                std::cout << "comando list-channels com parametros invalidos!!!\n";
+            }
+        } else if(comando == "enter-channel"){
+            if(posSegundoEspaco != std::string::npos && posTerceiroEspaco == std::string::npos) {
+                nome = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
+                tipo = linha.substr(posSegundoEspaco + 1);
+
+                s.entrarCanal(nome, tipo);
+            } else {
+                std::cout << "comando enter-channel com parametros invalidos!!!\n";
+            }
+        } else if(comando == "leave-channel") {
+            if(posPrimeiroEspaco == std::string::npos){
+                s.sairCanal();
+            } else {
+                std::cout << "comando leave-channel com parametros invalidos!!!\n";
+            }
         } else {
             std::cout << "comando invalido!\n";
         }
