@@ -107,3 +107,14 @@ void Servidor::listarCanais() {
         }
     }
 }
+
+void Servidor::enviarMensagemCanal(Mensagem m, int indiceCanal) {
+    this->canais[indiceCanal]->adicionarMensagem(m);
+}
+
+Canal* Servidor::retornaCanal(int indice) {
+    if(indice < this->canais.size()){
+        return this->canais[indice];
+    }
+    return nullptr;
+}

@@ -7,38 +7,57 @@
 \DoxyCodeLine{00003\ }
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Canal.h"{}}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_servidor}{Servidor}}\ \{}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_servidor_a52c21983ad654fb7994dead4ae433e2c}{usuarioDonoId}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_servidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_servidor_a61fecd2b3435d7048d793741c5f3bfdf}{descricao}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_servidor_a7448f419ead42bf7f0bd42d5bdc53ec6}{codigoConvite}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::vector<Canal\ *>\ \mbox{\hyperlink{class_servidor_a8a6344bfd8fc30dda70fca49a9b7234f}{canais}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{class_servidor_ac26153c0e4ee691298741be313624ea9}{participantesIDs}};\ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_servidor}{Servidor}}(std::string\ \mbox{\hyperlink{class_servidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}},\ \textcolor{keywordtype}{int}\ IDdono);}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_servidor_af094e7503c4fd8e124679f03eae3f0cd}{getNome}}();}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_servidor_a26b0bc0263c27380ced8b2357c757f4e}{getIDdono}}();}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_servidor_a4a232f83c626f7afcd98f1aeed5986f5}{setDescricao}}(std::string\ \mbox{\hyperlink{class_servidor_a61fecd2b3435d7048d793741c5f3bfdf}{descricao}});}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_servidor_a8baf111eee2d2a02017177cf9bb00f4c}{setConvite}}(std::string\ convite);}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_servidor_aa6ada6483be372cfb824e6003a2c8e17}{adicionaParticipante}}(\textcolor{keywordtype}{int}\ ID);}
-\DoxyCodeLine{00062\ }
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_servidor_a9ba47dfe5c573aeb3f56f934b697d1ba}{usuarioParticipa}}(\textcolor{keywordtype}{int}\ ID);}
-\DoxyCodeLine{00069\ }
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_servidor_aa041eddfb316b9fe943f0cba978091c9}{verificaConvite}}(std::string\ convite);}
-\DoxyCodeLine{00076\ }
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_servidor_a8f8db1c0a2cecbb6cb59bf7caa035460}{tamListaParticipantes}}();}
-\DoxyCodeLine{00082\ }
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_servidor_ac1224e90d1e17d155f946e6a0935c25c}{IDparticipante}}(\textcolor{keywordtype}{int}\ indice);}
-\DoxyCodeLine{00089\ \};}
-\DoxyCodeLine{00090\ }
-\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}CanalTexto.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}CanalVoz.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_servidor}{Servidor}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_servidor_a52c21983ad654fb7994dead4ae433e2c}{usuarioDonoId}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_servidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_servidor_a61fecd2b3435d7048d793741c5f3bfdf}{descricao}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_servidor_a7448f419ead42bf7f0bd42d5bdc53ec6}{codigoConvite}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::vector<Canal\ *>\ \mbox{\hyperlink{class_servidor_a8a6344bfd8fc30dda70fca49a9b7234f}{canais}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{class_servidor_ac26153c0e4ee691298741be313624ea9}{participantesIDs}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_servidor}{Servidor}}(std::string\ \mbox{\hyperlink{class_servidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}},\ \textcolor{keywordtype}{int}\ IDdono);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_servidor}{\string~Servidor}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_servidor_af094e7503c4fd8e124679f03eae3f0cd}{getNome}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_servidor_a26b0bc0263c27380ced8b2357c757f4e}{getIDdono}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_servidor_a4a232f83c626f7afcd98f1aeed5986f5}{setDescricao}}(std::string\ \mbox{\hyperlink{class_servidor_a61fecd2b3435d7048d793741c5f3bfdf}{descricao}});}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_servidor_a8baf111eee2d2a02017177cf9bb00f4c}{setConvite}}(std::string\ convite);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_servidor_aa6ada6483be372cfb824e6003a2c8e17}{adicionaParticipante}}(\textcolor{keywordtype}{int}\ ID);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_servidor_a9ba47dfe5c573aeb3f56f934b697d1ba}{usuarioParticipa}}(\textcolor{keywordtype}{int}\ ID);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_servidor_aa041eddfb316b9fe943f0cba978091c9}{verificaConvite}}(std::string\ convite);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_servidor_a8f8db1c0a2cecbb6cb59bf7caa035460}{tamListaParticipantes}}();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_servidor_ac1224e90d1e17d155f946e6a0935c25c}{IDparticipante}}(\textcolor{keywordtype}{int}\ indice);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_servidor_a41fb0180bd0f2e08597a3555c3633c6c}{existeCanal}}(std::string\ \mbox{\hyperlink{class_servidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}},\ std::string\ tipo);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_servidor_ad9b6a82d3d553035433d45cdb2e6bce9}{retornaIndiceCanal}}(std::string\ \mbox{\hyperlink{class_servidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}},\ std::string\ tipo);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_servidor_a0425ac65d1f588151c6076e9f6f6ff1e}{criarCanal}}(std::string\ \mbox{\hyperlink{class_servidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}},\ std::string\ tipo);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_servidor_a3a2ccc1891ceb11f1dbbccbbeb398f31}{listarCanais}}();}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_servidor_a715ae41e5c299294f6f79a80c04a987f}{enviarMensagemCanal}}(\mbox{\hyperlink{class_mensagem}{Mensagem}}\ m,\ \textcolor{keywordtype}{int}\ indiceCanal);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_canal}{Canal}}*\ \mbox{\hyperlink{class_servidor_a73036d14cc895275dd1e6791d8babde9}{retornaCanal}}(\textcolor{keywordtype}{int}\ indice);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

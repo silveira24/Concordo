@@ -1,0 +1,27 @@
+\doxysection{Canal\+Voz.\+h}
+\hypertarget{_canal_voz_8h_source}{}\label{_canal_voz_8h_source}\index{include/CanalVoz.h@{include/CanalVoz.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CANALVOZ\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CANALVOZ\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}canal.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_canal_voz}{CanalVoz}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_canal}{Canal}}\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ \mbox{\hyperlink{class_mensagem}{Mensagem}}\ \mbox{\hyperlink{class_canal_voz_a5980806ae2e2360d98c2ef9539a0a8f1}{ultimaMensagem}};\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_canal_voz}{CanalVoz}}(std::string\ \mbox{\hyperlink{class_canal_ac5e6d80712597bacacd46c0d153c2644}{nome}});}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_canal_voz_a806ded4ef04350c61f47d89a7936c589}{getTipo}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_canal_voz_a9e47f071378b8906171ac9d05ccd5d72}{adicionarMensagem}}(\mbox{\hyperlink{class_mensagem}{Mensagem}}\ m)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mensagem}{Mensagem}}\ \mbox{\hyperlink{class_canal_voz_a355aeaaf58f2537dd7e7f81aab6bac2f}{retornaMensagem}}(\textcolor{keywordtype}{int}\ indice)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_canal_voz_a3e8100ecfcd735ca4c13b3aa09840a04}{tam}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

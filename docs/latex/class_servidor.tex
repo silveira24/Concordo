@@ -31,7 +31,20 @@ bool \mbox{\hyperlink{class_servidor_aa041eddfb316b9fe943f0cba978091c9}{verifica
 int \mbox{\hyperlink{class_servidor_a8f8db1c0a2cecbb6cb59bf7caa035460}{tam\+Lista\+Participantes}} ()
 \begin{DoxyCompactList}\small\item\em Obtém o tamanho da lista de participantes do servidor. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_servidor_ac1224e90d1e17d155f946e6a0935c25c}{IDparticipante}} (int indice)
-\begin{DoxyCompactList}\small\item\em Obtém o ID de um participante do servidor a partir de um índice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Obtém o ID de um participante do servidor a partir de um índice. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_servidor_a41fb0180bd0f2e08597a3555c3633c6c}{existe\+Canal}} (std\+::string \mbox{\hyperlink{class_servidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}}, std\+::string tipo)
+\begin{DoxyCompactList}\small\item\em Verifica se existe um canal com o nome e tipo especificados. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_servidor_ad9b6a82d3d553035433d45cdb2e6bce9}{retorna\+Indice\+Canal}} (std\+::string \mbox{\hyperlink{class_servidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}}, std\+::string tipo)
+\begin{DoxyCompactList}\small\item\em Retorna o índice do canal com o nome e tipo especificados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servidor_a0425ac65d1f588151c6076e9f6f6ff1e}{criar\+Canal}} (std\+::string \mbox{\hyperlink{class_servidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}}, std\+::string tipo)
+\begin{DoxyCompactList}\small\item\em Cria um novo canal com o nome e tipo especificados. \end{DoxyCompactList}\item 
+\Hypertarget{class_servidor_a3a2ccc1891ceb11f1dbbccbbeb398f31}\label{class_servidor_a3a2ccc1891ceb11f1dbbccbbeb398f31} 
+void {\bfseries listar\+Canais} ()
+\begin{DoxyCompactList}\small\item\em Lista todos os canais disponíveis no servidor atual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servidor_a715ae41e5c299294f6f79a80c04a987f}{enviar\+Mensagem\+Canal}} (\mbox{\hyperlink{class_mensagem}{Mensagem}} m, int indice\+Canal)
+\begin{DoxyCompactList}\small\item\em Envia uma mensagem para o canal no índice especificado. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_canal}{Canal}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_servidor_a73036d14cc895275dd1e6791d8babde9}{retorna\+Canal}} (int indice)
+\begin{DoxyCompactList}\small\item\em Retorna o ponteiro para o canal no índice especificado. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -90,6 +103,60 @@ Adiciona um participante ao servidor.
 {\em ID} & ID do participante a ser adicionado \\
 \hline
 \end{DoxyParams}
+\Hypertarget{class_servidor_a0425ac65d1f588151c6076e9f6f6ff1e}\label{class_servidor_a0425ac65d1f588151c6076e9f6f6ff1e} 
+\index{Servidor@{Servidor}!criarCanal@{criarCanal}}
+\index{criarCanal@{criarCanal}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{criarCanal()}{criarCanal()}}
+{\footnotesize\ttfamily void Servidor\+::criar\+Canal (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{tipo }\end{DoxyParamCaption})}
+
+
+
+Cria um novo canal com o nome e tipo especificados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & O nome do canal a ser criado. \\
+\hline
+{\em tipo} & O tipo do canal a ser criado. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_servidor_a715ae41e5c299294f6f79a80c04a987f}\label{class_servidor_a715ae41e5c299294f6f79a80c04a987f} 
+\index{Servidor@{Servidor}!enviarMensagemCanal@{enviarMensagemCanal}}
+\index{enviarMensagemCanal@{enviarMensagemCanal}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{enviarMensagemCanal()}{enviarMensagemCanal()}}
+{\footnotesize\ttfamily void Servidor\+::enviar\+Mensagem\+Canal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensagem}{Mensagem}}}]{m,  }\item[{int}]{indice\+Canal }\end{DoxyParamCaption})}
+
+
+
+Envia uma mensagem para o canal no índice especificado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & A mensagem a ser enviada. \\
+\hline
+{\em indice\+Canal} & O índice do canal. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_servidor_a41fb0180bd0f2e08597a3555c3633c6c}\label{class_servidor_a41fb0180bd0f2e08597a3555c3633c6c} 
+\index{Servidor@{Servidor}!existeCanal@{existeCanal}}
+\index{existeCanal@{existeCanal}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{existeCanal()}{existeCanal()}}
+{\footnotesize\ttfamily bool Servidor\+::existe\+Canal (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{tipo }\end{DoxyParamCaption})}
+
+
+
+Verifica se existe um canal com o nome e tipo especificados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & O nome do canal a ser verificado. \\
+\hline
+{\em tipo} & O tipo do canal a ser verificado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se o canal existe, false caso contrário. 
+\end{DoxyReturn}
 \Hypertarget{class_servidor_a26b0bc0263c27380ced8b2357c757f4e}\label{class_servidor_a26b0bc0263c27380ced8b2357c757f4e} 
 \index{Servidor@{Servidor}!getIDdono@{getIDdono}}
 \index{getIDdono@{getIDdono}!Servidor@{Servidor}}
@@ -133,6 +200,44 @@ Obtém o ID de um participante do servidor a partir de um índice.
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
 ID do participante 
+\end{DoxyReturn}
+\Hypertarget{class_servidor_a73036d14cc895275dd1e6791d8babde9}\label{class_servidor_a73036d14cc895275dd1e6791d8babde9} 
+\index{Servidor@{Servidor}!retornaCanal@{retornaCanal}}
+\index{retornaCanal@{retornaCanal}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{retornaCanal()}{retornaCanal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_canal}{Canal}} \texorpdfstring{$\ast$}{*} Servidor\+::retorna\+Canal (\begin{DoxyParamCaption}\item[{int}]{indice }\end{DoxyParamCaption})}
+
+
+
+Retorna o ponteiro para o canal no índice especificado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em indice} & O índice do canal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um ponteiro para o canal, ou nullptr se o canal não for encontrado. 
+\end{DoxyReturn}
+\Hypertarget{class_servidor_ad9b6a82d3d553035433d45cdb2e6bce9}\label{class_servidor_ad9b6a82d3d553035433d45cdb2e6bce9} 
+\index{Servidor@{Servidor}!retornaIndiceCanal@{retornaIndiceCanal}}
+\index{retornaIndiceCanal@{retornaIndiceCanal}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{retornaIndiceCanal()}{retornaIndiceCanal()}}
+{\footnotesize\ttfamily int Servidor\+::retorna\+Indice\+Canal (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{tipo }\end{DoxyParamCaption})}
+
+
+
+Retorna o índice do canal com o nome e tipo especificados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & O nome do canal. \\
+\hline
+{\em tipo} & O tipo do canal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O índice do canal, ou -\/1 se o canal não for encontrado. 
 \end{DoxyReturn}
 \Hypertarget{class_servidor_a8baf111eee2d2a02017177cf9bb00f4c}\label{class_servidor_a8baf111eee2d2a02017177cf9bb00f4c} 
 \index{Servidor@{Servidor}!setConvite@{setConvite}}

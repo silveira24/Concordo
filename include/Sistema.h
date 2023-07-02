@@ -4,6 +4,9 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <chrono>
+#include <ctime>
+#include <iomanip>
 #include "Usuario.h"
 #include "Servidor.h"
 
@@ -124,13 +127,51 @@ public:
      * @param tipo O tipo do cana a ser criado (de voz ou de texto).
      */
 
+    /**
+     * @brief Cria um novo canal no servidor atual com o nome e tipo especificados.
+     *
+     * @param nome O nome do canal a ser criado.
+     * @param tipo O tipo do canal a ser criado.
+     */
     void criarCanalServidorAtual(std::string nome, std::string tipo);
 
+    /**
+     * @brief Lista todos os canais do servidor atual.
+     */
     void listarCanaisServidorAtual();
 
+    /**
+     * @brief Entra no canal com o nome e tipo especificados do servidor atual.
+     *
+     * @param nome O nome do canal a ser acessado.
+     * @param tipo O tipo do canal a ser acessado.
+     */
     void entrarCanal(std::string nome, std::string tipo);
 
+    /**
+     * @brief Sai do canal atual.
+     */
     void sairCanal();
+
+    /**
+     * @brief Envia uma mensagem para o canal atual.
+     *
+     * @param conteudo O conteúdo da mensagem a ser enviada.
+     */
+    void enviarMensagem(std::string conteudo);
+
+    /**
+     * @brief Lista as mensagens do canal atual.
+     */
+    void listarMensagens();
+
+    /**
+     * @brief Exibe uma mensagem específica.
+     *
+     * @param m A mensagem a ser exibida.
+     */
+    void exibirMensagem(Mensagem m);
+
 };
 
 #endif

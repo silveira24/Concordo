@@ -71,7 +71,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Membros Públicos</a> &#124;
-<a href="#pub-attribs">Atributos Públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a> &#124;
 <a href="class_sistema-members.html">Lista de todos os Membros</a>  </div>
   <div class="headertitle"><div class="title">Referência da Classe Sistema</div></div>
 </div><!--header-->
@@ -134,9 +134,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sairServidor</b> ()</
 void&#160;</td><td class="memItemRight" valign="bottom"><b>listarParticipantes</b> ()</td></tr>
 <tr class="memdesc:a6101584f6f5ef9a8724c2c49a59a3800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista os participantes do servidor atual. <br /></td></tr>
 <tr class="separator:a6101584f6f5ef9a8724c2c49a59a3800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace3fe8638037b4551799db1fd8c58144"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sistema.html#ace3fe8638037b4551799db1fd8c58144">criarCanalServidorAtual</a> (std::string nome, std::string tipo)</td></tr>
+<tr class="memdesc:ace3fe8638037b4551799db1fd8c58144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um canal novo no servidor atual.  <br /></td></tr>
+<tr class="separator:ace3fe8638037b4551799db1fd8c58144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd3db1a0ef7ebf60c2ce23a056e96d4"><td class="memItemLeft" align="right" valign="top"><a id="aabd3db1a0ef7ebf60c2ce23a056e96d4" name="aabd3db1a0ef7ebf60c2ce23a056e96d4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>listarCanaisServidorAtual</b> ()</td></tr>
+<tr class="memdesc:aabd3db1a0ef7ebf60c2ce23a056e96d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os canais do servidor atual. <br /></td></tr>
+<tr class="separator:aabd3db1a0ef7ebf60c2ce23a056e96d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca1eaa06eab3d7f8ac3a55d333d86b89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sistema.html#aca1eaa06eab3d7f8ac3a55d333d86b89">entrarCanal</a> (std::string nome, std::string tipo)</td></tr>
+<tr class="memdesc:aca1eaa06eab3d7f8ac3a55d333d86b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entra no canal com o nome e tipo especificados do servidor atual.  <br /></td></tr>
+<tr class="separator:aca1eaa06eab3d7f8ac3a55d333d86b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d3548d307127df93271c7f496190849"><td class="memItemLeft" align="right" valign="top"><a id="a8d3548d307127df93271c7f496190849" name="a8d3548d307127df93271c7f496190849"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>sairCanal</b> ()</td></tr>
+<tr class="memdesc:a8d3548d307127df93271c7f496190849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sai do canal atual. <br /></td></tr>
+<tr class="separator:a8d3548d307127df93271c7f496190849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05bed506bbb62badac0f6efa2355f212"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sistema.html#a05bed506bbb62badac0f6efa2355f212">enviarMensagem</a> (std::string conteudo)</td></tr>
+<tr class="memdesc:a05bed506bbb62badac0f6efa2355f212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envia uma mensagem para o canal atual.  <br /></td></tr>
+<tr class="separator:a05bed506bbb62badac0f6efa2355f212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66243daa152a10d9b3d72d665f2765ec"><td class="memItemLeft" align="right" valign="top"><a id="a66243daa152a10d9b3d72d665f2765ec" name="a66243daa152a10d9b3d72d665f2765ec"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>listarMensagens</b> ()</td></tr>
+<tr class="memdesc:a66243daa152a10d9b3d72d665f2765ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista as mensagens do canal atual. <br /></td></tr>
+<tr class="separator:a66243daa152a10d9b3d72d665f2765ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d838d1cec7987c646f467bfb80b6da8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sistema.html#a9d838d1cec7987c646f467bfb80b6da8">exibirMensagem</a> (<a class="el" href="class_mensagem.html">Mensagem</a> m)</td></tr>
+<tr class="memdesc:a9d838d1cec7987c646f467bfb80b6da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe uma mensagem específica.  <br /></td></tr>
+<tr class="separator:a9d838d1cec7987c646f467bfb80b6da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Atributos Públicos</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
 <tr class="memitem:a3cb541c9680f62350de9df45c0d3b608"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_usuario.html">Usuario</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sistema.html#a3cb541c9680f62350de9df45c0d3b608">usuarios</a></td></tr>
 <tr class="separator:a3cb541c9680f62350de9df45c0d3b608"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac043095da6d7366d07d53fd44e23ef7d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_servidor.html">Servidor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sistema.html#ac043095da6d7366d07d53fd44e23ef7d">servidores</a></td></tr>
@@ -145,8 +169,8 @@ Atributos Públicos</h2></td></tr>
 <tr class="separator:ab25dde86a72aabad9ecdeee42973fc1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e2fd6abc840b34204e5b899983f16e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sistema.html#a4e2fd6abc840b34204e5b899983f16e5">indiceServerAtual</a></td></tr>
 <tr class="separator:a4e2fd6abc840b34204e5b899983f16e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a549026a908a7c93d190e1e537fe8032b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sistema.html#a549026a908a7c93d190e1e537fe8032b">nomeCanalAtual</a></td></tr>
-<tr class="separator:a549026a908a7c93d190e1e537fe8032b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d45ada1322df96301cc994a3246a074"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sistema.html#a0d45ada1322df96301cc994a3246a074">indiceCanalAtual</a></td></tr>
+<tr class="separator:a0d45ada1322df96301cc994a3246a074"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af343898a8031753dc0048ee9e6ceb303"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sistema.html#af343898a8031753dc0048ee9e6ceb303">contID</a></td></tr>
 <tr class="separator:af343898a8031753dc0048ee9e6ceb303"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42b0bd1068eb45fec78c3e2466b31015"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sistema.html#a42b0bd1068eb45fec78c3e2466b31015">estado</a></td></tr>
@@ -156,6 +180,51 @@ Atributos Públicos</h2></td></tr>
 <div class="textblock"><p>Classe que representa o sistema Concordo. </p>
 <p>Esta classe gerencia os usuários, servidores e interações do sistema Concordo. Ela permite criar usuários, criar servidores, gerenciar participantes, realizar login e muito mais. </p>
 </div><h2 class="groupheader">Documentação das funções</h2>
+<a id="ace3fe8638037b4551799db1fd8c58144" name="ace3fe8638037b4551799db1fd8c58144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace3fe8638037b4551799db1fd8c58144">&#9670;&#160;</a></span>criarCanalServidorAtual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sistema::criarCanalServidorAtual </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>tipo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cria um canal novo no servidor atual. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nome</td><td>O nome do canal a ser criado. </td></tr>
+    <tr><td class="paramname">tipo</td><td>O tipo do cana a ser criado (de voz ou de texto).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cria um novo canal no servidor atual com o nome e tipo especificados.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nome</td><td>O nome do canal a ser criado. </td></tr>
+    <tr><td class="paramname">tipo</td><td>O tipo do canal a ser criado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a585341b4af739bfe6e2d4b82bc6f9c8a" name="a585341b4af739bfe6e2d4b82bc6f9c8a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a585341b4af739bfe6e2d4b82bc6f9c8a">&#9670;&#160;</a></span>criarServidor()</h2>
 
@@ -253,6 +322,43 @@ Atributos Públicos</h2></td></tr>
 
 </div>
 </div>
+<a id="aca1eaa06eab3d7f8ac3a55d333d86b89" name="aca1eaa06eab3d7f8ac3a55d333d86b89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca1eaa06eab3d7f8ac3a55d333d86b89">&#9670;&#160;</a></span>entrarCanal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sistema::entrarCanal </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>tipo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Entra no canal com o nome e tipo especificados do servidor atual. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nome</td><td>O nome do canal a ser acessado. </td></tr>
+    <tr><td class="paramname">tipo</td><td>O tipo do canal a ser acessado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a5075fc2609f9da6e91ca96f1ca763c88" name="a5075fc2609f9da6e91ca96f1ca763c88"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5075fc2609f9da6e91ca96f1ca763c88">&#9670;&#160;</a></span>entrarServidor()</h2>
 
@@ -284,6 +390,58 @@ Atributos Públicos</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">nome</td><td>O nome do servidor a ser entrado. </td></tr>
     <tr><td class="paramname">convite</td><td>O código de convite para entrar no servidor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a05bed506bbb62badac0f6efa2355f212" name="a05bed506bbb62badac0f6efa2355f212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05bed506bbb62badac0f6efa2355f212">&#9670;&#160;</a></span>enviarMensagem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sistema::enviarMensagem </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>conteudo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envia uma mensagem para o canal atual. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conteudo</td><td>O conteúdo da mensagem a ser enviada. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9d838d1cec7987c646f467bfb80b6da8" name="a9d838d1cec7987c646f467bfb80b6da8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d838d1cec7987c646f467bfb80b6da8">&#9670;&#160;</a></span>exibirMensagem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sistema::exibirMensagem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mensagem.html">Mensagem</a>&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exibe uma mensagem específica. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>A mensagem a ser exibida. </td></tr>
   </table>
   </dd>
 </dl>
@@ -487,11 +645,19 @@ Atributos Públicos</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int Sistema::contID</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Contador de IDs de usuários. </p>
 
@@ -502,11 +668,19 @@ Atributos Públicos</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::string Sistema::estado</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Estado do sistema (deslogado, logado, em um servidor, ou em um canal). </p>
 
@@ -517,13 +691,44 @@ Atributos Públicos</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int Sistema::IDuserLogado</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>ID do usuário logado atualmente. </p>
+
+</div>
+</div>
+<a id="a0d45ada1322df96301cc994a3246a074" name="a0d45ada1322df96301cc994a3246a074"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d45ada1322df96301cc994a3246a074">&#9670;&#160;</a></span>indiceCanalAtual</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Sistema::indiceCanalAtual</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Nome do canal atualmente selecionado. </p>
 
 </div>
 </div>
@@ -532,28 +737,21 @@ Atributos Públicos</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int Sistema::indiceServerAtual</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Índice do servidor atualmente selecionado. </p>
-
-</div>
-</div>
-<a id="a549026a908a7c93d190e1e537fe8032b" name="a549026a908a7c93d190e1e537fe8032b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a549026a908a7c93d190e1e537fe8032b">&#9670;&#160;</a></span>nomeCanalAtual</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Sistema::nomeCanalAtual</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Nome do canal atualmente selecionado. </p>
 
 </div>
 </div>
@@ -562,11 +760,19 @@ Atributos Públicos</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;<a class="el" href="class_servidor.html">Servidor</a>&gt; Sistema::servidores</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Vetor de servidores criados no sistema. </p>
 
@@ -577,11 +783,19 @@ Atributos Públicos</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;<a class="el" href="class_usuario.html">Usuario</a>&gt; Sistema::usuarios</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Vetor de usuários registrados no sistema. </p>
 

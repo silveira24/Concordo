@@ -1,13 +1,144 @@
 \doxysection{Referência da Classe Canal}
 \hypertarget{class_canal}{}\label{class_canal}\index{Canal@{Canal}}
-\doxysubsubsection*{Atributos Privados}
+
+
+Classe base para os canais.  
+
+
+
+
+{\ttfamily \#include $<$Canal.\+h$>$}
+
+Diagrama de hierarquia da classe Canal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_canal}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_canal_ac5e6d80712597bacacd46c0d153c2644}\label{class_canal_ac5e6d80712597bacacd46c0d153c2644} 
-std\+::string {\bfseries nome}
+std\+::string \mbox{\hyperlink{class_canal_ac1b8ce05d8102f8b5f6a9b468336b9b7}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome do canal. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_canal_a8c8083daa8552393b5cbc0367af11d3a}{get\+Tipo}} () const =0
+\begin{DoxyCompactList}\small\item\em Obtém o tipo do canal. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_canal_ae0d584fcf84697bdc0b9600d5f5be5ba}{adicionar\+Mensagem}} (\mbox{\hyperlink{class_mensagem}{Mensagem}} m) const =0
+\begin{DoxyCompactList}\small\item\em Adiciona uma mensagem ao canal. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_mensagem}{Mensagem}} \mbox{\hyperlink{class_canal_a44092d9466f62a84c35c0f50c1360552}{retorna\+Mensagem}} (int indice) const =0
+\begin{DoxyCompactList}\small\item\em Retorna uma mensagem do canal com base no índice. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_canal_aa40640b9f156e259c36fedb3b52f6e9b}{tam}} () const =0
+\begin{DoxyCompactList}\small\item\em Obtém a quantidade de mensagens que estão armazenadas no canal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_canal_ac5e6d80712597bacacd46c0d153c2644}{nome}}
 \end{DoxyCompactItemize}
 
 
-A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\doxysubsection{Descrição detalhada}
+Classe base para os canais. 
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_canal_ae0d584fcf84697bdc0b9600d5f5be5ba}\label{class_canal_ae0d584fcf84697bdc0b9600d5f5be5ba} 
+\index{Canal@{Canal}!adicionarMensagem@{adicionarMensagem}}
+\index{adicionarMensagem@{adicionarMensagem}!Canal@{Canal}}
+\doxysubsubsection{\texorpdfstring{adicionarMensagem()}{adicionarMensagem()}}
+{\footnotesize\ttfamily virtual void Canal\+::adicionar\+Mensagem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensagem}{Mensagem}}}]{m }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Adiciona uma mensagem ao canal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & A mensagem a ser adicionada. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por \mbox{\hyperlink{class_canal_texto_a294b78ea3b7513a89e54c5d1bdfbab1f}{Canal\+Texto}} e \mbox{\hyperlink{class_canal_voz_a9e47f071378b8906171ac9d05ccd5d72}{Canal\+Voz}}.
+
+\Hypertarget{class_canal_ac1b8ce05d8102f8b5f6a9b468336b9b7}\label{class_canal_ac1b8ce05d8102f8b5f6a9b468336b9b7} 
+\index{Canal@{Canal}!getNome@{getNome}}
+\index{getNome@{getNome}!Canal@{Canal}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily std\+::string Canal\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o nome do canal. 
+
+\begin{DoxyReturn}{Retorna}
+O nome do canal. 
+\end{DoxyReturn}
+\Hypertarget{class_canal_a8c8083daa8552393b5cbc0367af11d3a}\label{class_canal_a8c8083daa8552393b5cbc0367af11d3a} 
+\index{Canal@{Canal}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!Canal@{Canal}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}}
+{\footnotesize\ttfamily virtual std\+::string Canal\+::get\+Tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Obtém o tipo do canal. 
+
+\begin{DoxyReturn}{Retorna}
+O tipo do canal. 
+\end{DoxyReturn}
+
+
+Implementado por \mbox{\hyperlink{class_canal_texto_aacde683051f9a965a94538b048eff49c}{Canal\+Texto}} e \mbox{\hyperlink{class_canal_voz_a806ded4ef04350c61f47d89a7936c589}{Canal\+Voz}}.
+
+\Hypertarget{class_canal_a44092d9466f62a84c35c0f50c1360552}\label{class_canal_a44092d9466f62a84c35c0f50c1360552} 
+\index{Canal@{Canal}!retornaMensagem@{retornaMensagem}}
+\index{retornaMensagem@{retornaMensagem}!Canal@{Canal}}
+\doxysubsubsection{\texorpdfstring{retornaMensagem()}{retornaMensagem()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_mensagem}{Mensagem}} Canal\+::retorna\+Mensagem (\begin{DoxyParamCaption}\item[{int}]{indice }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retorna uma mensagem do canal com base no índice. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em indice} & O índice da mensagem desejada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A mensagem correspondente ao índice. 
+\end{DoxyReturn}
+
+
+Implementado por \mbox{\hyperlink{class_canal_texto_ac122ab059e73f2a157ffce6c3945fabc}{Canal\+Texto}} e \mbox{\hyperlink{class_canal_voz_a355aeaaf58f2537dd7e7f81aab6bac2f}{Canal\+Voz}}.
+
+\Hypertarget{class_canal_aa40640b9f156e259c36fedb3b52f6e9b}\label{class_canal_aa40640b9f156e259c36fedb3b52f6e9b} 
+\index{Canal@{Canal}!tam@{tam}}
+\index{tam@{tam}!Canal@{Canal}}
+\doxysubsubsection{\texorpdfstring{tam()}{tam()}}
+{\footnotesize\ttfamily virtual int Canal\+::tam (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Obtém a quantidade de mensagens que estão armazenadas no canal. 
+
+\begin{DoxyReturn}{Retorna}
+a quantidade de mensagens que estão armazenadas no canal. 
+\end{DoxyReturn}
+
+
+Implementado por \mbox{\hyperlink{class_canal_texto_ad439d2110311e3d13e48f7fc5aaad279}{Canal\+Texto}} e \mbox{\hyperlink{class_canal_voz_a3e8100ecfcd735ca4c13b3aa09840a04}{Canal\+Voz}}.
+
+
+
+\doxysubsection{Atributos}
+\Hypertarget{class_canal_ac5e6d80712597bacacd46c0d153c2644}\label{class_canal_ac5e6d80712597bacacd46c0d153c2644} 
+\index{Canal@{Canal}!nome@{nome}}
+\index{nome@{nome}!Canal@{Canal}}
+\doxysubsubsection{\texorpdfstring{nome}{nome}}
+{\footnotesize\ttfamily std\+::string Canal\+::nome\hspace{0.3cm}{\ttfamily [protected]}}
+
+O nome do canal. 
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
-include/Canal.\+h\end{DoxyCompactItemize}
+include/Canal.\+h\item 
+src/Canal.\+cpp\end{DoxyCompactItemize}

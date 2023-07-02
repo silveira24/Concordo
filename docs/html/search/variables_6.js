@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['senha_0',['senha',['../class_usuario.html#a5f324af32e988e55160d5f3651b5d2b1',1,'Usuario']]],
-  ['servidores_1',['servidores',['../class_sistema.html#ac043095da6d7366d07d53fd44e23ef7d',1,'Sistema']]]
+  ['participantesids_0',['participantesIDs',['../class_servidor.html#ac26153c0e4ee691298741be313624ea9',1,'Servidor']]]
 ];

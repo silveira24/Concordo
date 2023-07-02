@@ -46,8 +46,25 @@ void {\bfseries sair\+Servidor} ()
 \begin{DoxyCompactList}\small\item\em Sai do servidor atual. \end{DoxyCompactList}\item 
 \Hypertarget{class_sistema_a6101584f6f5ef9a8724c2c49a59a3800}\label{class_sistema_a6101584f6f5ef9a8724c2c49a59a3800} 
 void {\bfseries listar\+Participantes} ()
-\begin{DoxyCompactList}\small\item\em Lista os participantes do servidor atual. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Atributos Públicos}
+\begin{DoxyCompactList}\small\item\em Lista os participantes do servidor atual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sistema_ace3fe8638037b4551799db1fd8c58144}{criar\+Canal\+Servidor\+Atual}} (std\+::string nome, std\+::string tipo)
+\begin{DoxyCompactList}\small\item\em Cria um canal novo no servidor atual. \end{DoxyCompactList}\item 
+\Hypertarget{class_sistema_aabd3db1a0ef7ebf60c2ce23a056e96d4}\label{class_sistema_aabd3db1a0ef7ebf60c2ce23a056e96d4} 
+void {\bfseries listar\+Canais\+Servidor\+Atual} ()
+\begin{DoxyCompactList}\small\item\em Lista todos os canais do servidor atual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sistema_aca1eaa06eab3d7f8ac3a55d333d86b89}{entrar\+Canal}} (std\+::string nome, std\+::string tipo)
+\begin{DoxyCompactList}\small\item\em Entra no canal com o nome e tipo especificados do servidor atual. \end{DoxyCompactList}\item 
+\Hypertarget{class_sistema_a8d3548d307127df93271c7f496190849}\label{class_sistema_a8d3548d307127df93271c7f496190849} 
+void {\bfseries sair\+Canal} ()
+\begin{DoxyCompactList}\small\item\em Sai do canal atual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sistema_a05bed506bbb62badac0f6efa2355f212}{enviar\+Mensagem}} (std\+::string conteudo)
+\begin{DoxyCompactList}\small\item\em Envia uma mensagem para o canal atual. \end{DoxyCompactList}\item 
+\Hypertarget{class_sistema_a66243daa152a10d9b3d72d665f2765ec}\label{class_sistema_a66243daa152a10d9b3d72d665f2765ec} 
+void {\bfseries listar\+Mensagens} ()
+\begin{DoxyCompactList}\small\item\em Lista as mensagens do canal atual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sistema_a9d838d1cec7987c646f467bfb80b6da8}{exibir\+Mensagem}} (\mbox{\hyperlink{class_mensagem}{Mensagem}} m)
+\begin{DoxyCompactList}\small\item\em Exibe uma mensagem específica. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
 std\+::vector$<$ \mbox{\hyperlink{class_usuario}{Usuario}} $>$ \mbox{\hyperlink{class_sistema_a3cb541c9680f62350de9df45c0d3b608}{usuarios}}
@@ -58,7 +75,7 @@ int \mbox{\hyperlink{class_sistema_ab25dde86a72aabad9ecdeee42973fc1e}{IDuser\+Lo
 \item 
 int \mbox{\hyperlink{class_sistema_a4e2fd6abc840b34204e5b899983f16e5}{indice\+Server\+Atual}}
 \item 
-std\+::string \mbox{\hyperlink{class_sistema_a549026a908a7c93d190e1e537fe8032b}{nome\+Canal\+Atual}}
+int \mbox{\hyperlink{class_sistema_a0d45ada1322df96301cc994a3246a074}{indice\+Canal\+Atual}}
 \item 
 int \mbox{\hyperlink{class_sistema_af343898a8031753dc0048ee9e6ceb303}{cont\+ID}}
 \item 
@@ -72,6 +89,32 @@ Classe que representa o sistema Concordo.
 Esta classe gerencia os usuários, servidores e interações do sistema Concordo. Ela permite criar usuários, criar servidores, gerenciar participantes, realizar login e muito mais. 
 
 \doxysubsection{Documentação das funções}
+\Hypertarget{class_sistema_ace3fe8638037b4551799db1fd8c58144}\label{class_sistema_ace3fe8638037b4551799db1fd8c58144} 
+\index{Sistema@{Sistema}!criarCanalServidorAtual@{criarCanalServidorAtual}}
+\index{criarCanalServidorAtual@{criarCanalServidorAtual}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{criarCanalServidorAtual()}{criarCanalServidorAtual()}}
+{\footnotesize\ttfamily void Sistema\+::criar\+Canal\+Servidor\+Atual (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{tipo }\end{DoxyParamCaption})}
+
+
+
+Cria um canal novo no servidor atual. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & O nome do canal a ser criado. \\
+\hline
+{\em tipo} & O tipo do cana a ser criado (de voz ou de texto).\\
+\hline
+\end{DoxyParams}
+Cria um novo canal no servidor atual com o nome e tipo especificados.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & O nome do canal a ser criado. \\
+\hline
+{\em tipo} & O tipo do canal a ser criado. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_sistema_a585341b4af739bfe6e2d4b82bc6f9c8a}\label{class_sistema_a585341b4af739bfe6e2d4b82bc6f9c8a} 
 \index{Sistema@{Sistema}!criarServidor@{criarServidor}}
 \index{criarServidor@{criarServidor}!Sistema@{Sistema}}
@@ -124,6 +167,23 @@ Verifica se um email já está sendo usado por outro usuário.
 \begin{DoxyReturn}{Retorna}
 true se o email já está em uso, false caso contrário. 
 \end{DoxyReturn}
+\Hypertarget{class_sistema_aca1eaa06eab3d7f8ac3a55d333d86b89}\label{class_sistema_aca1eaa06eab3d7f8ac3a55d333d86b89} 
+\index{Sistema@{Sistema}!entrarCanal@{entrarCanal}}
+\index{entrarCanal@{entrarCanal}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{entrarCanal()}{entrarCanal()}}
+{\footnotesize\ttfamily void Sistema\+::entrar\+Canal (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{tipo }\end{DoxyParamCaption})}
+
+
+
+Entra no canal com o nome e tipo especificados do servidor atual. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & O nome do canal a ser acessado. \\
+\hline
+{\em tipo} & O tipo do canal a ser acessado. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_sistema_a5075fc2609f9da6e91ca96f1ca763c88}\label{class_sistema_a5075fc2609f9da6e91ca96f1ca763c88} 
 \index{Sistema@{Sistema}!entrarServidor@{entrarServidor}}
 \index{entrarServidor@{entrarServidor}!Sistema@{Sistema}}
@@ -139,6 +199,36 @@ Entra em um servidor.
 {\em nome} & O nome do servidor a ser entrado. \\
 \hline
 {\em convite} & O código de convite para entrar no servidor. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sistema_a05bed506bbb62badac0f6efa2355f212}\label{class_sistema_a05bed506bbb62badac0f6efa2355f212} 
+\index{Sistema@{Sistema}!enviarMensagem@{enviarMensagem}}
+\index{enviarMensagem@{enviarMensagem}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{enviarMensagem()}{enviarMensagem()}}
+{\footnotesize\ttfamily void Sistema\+::enviar\+Mensagem (\begin{DoxyParamCaption}\item[{std\+::string}]{conteudo }\end{DoxyParamCaption})}
+
+
+
+Envia uma mensagem para o canal atual. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em conteudo} & O conteúdo da mensagem a ser enviada. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sistema_a9d838d1cec7987c646f467bfb80b6da8}\label{class_sistema_a9d838d1cec7987c646f467bfb80b6da8} 
+\index{Sistema@{Sistema}!exibirMensagem@{exibirMensagem}}
+\index{exibirMensagem@{exibirMensagem}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{exibirMensagem()}{exibirMensagem()}}
+{\footnotesize\ttfamily void Sistema\+::exibir\+Mensagem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensagem}{Mensagem}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Exibe uma mensagem específica. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & A mensagem a ser exibida. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{class_sistema_aff62f1f20362eeed65487601e033767b}\label{class_sistema_aff62f1f20362eeed65487601e033767b} 
@@ -250,43 +340,43 @@ Define o código de convite para um servidor.
 \index{Sistema@{Sistema}!contID@{contID}}
 \index{contID@{contID}!Sistema@{Sistema}}
 \doxysubsubsection{\texorpdfstring{contID}{contID}}
-{\footnotesize\ttfamily int Sistema\+::cont\+ID}
+{\footnotesize\ttfamily int Sistema\+::cont\+ID\hspace{0.3cm}{\ttfamily [private]}}
 
 Contador de IDs de usuários. \Hypertarget{class_sistema_a42b0bd1068eb45fec78c3e2466b31015}\label{class_sistema_a42b0bd1068eb45fec78c3e2466b31015} 
 \index{Sistema@{Sistema}!estado@{estado}}
 \index{estado@{estado}!Sistema@{Sistema}}
 \doxysubsubsection{\texorpdfstring{estado}{estado}}
-{\footnotesize\ttfamily std\+::string Sistema\+::estado}
+{\footnotesize\ttfamily std\+::string Sistema\+::estado\hspace{0.3cm}{\ttfamily [private]}}
 
 Estado do sistema (deslogado, logado, em um servidor, ou em um canal). \Hypertarget{class_sistema_ab25dde86a72aabad9ecdeee42973fc1e}\label{class_sistema_ab25dde86a72aabad9ecdeee42973fc1e} 
 \index{Sistema@{Sistema}!IDuserLogado@{IDuserLogado}}
 \index{IDuserLogado@{IDuserLogado}!Sistema@{Sistema}}
 \doxysubsubsection{\texorpdfstring{IDuserLogado}{IDuserLogado}}
-{\footnotesize\ttfamily int Sistema\+::\+IDuser\+Logado}
+{\footnotesize\ttfamily int Sistema\+::\+IDuser\+Logado\hspace{0.3cm}{\ttfamily [private]}}
 
-ID do usuário logado atualmente. \Hypertarget{class_sistema_a4e2fd6abc840b34204e5b899983f16e5}\label{class_sistema_a4e2fd6abc840b34204e5b899983f16e5} 
+ID do usuário logado atualmente. \Hypertarget{class_sistema_a0d45ada1322df96301cc994a3246a074}\label{class_sistema_a0d45ada1322df96301cc994a3246a074} 
+\index{Sistema@{Sistema}!indiceCanalAtual@{indiceCanalAtual}}
+\index{indiceCanalAtual@{indiceCanalAtual}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{indiceCanalAtual}{indiceCanalAtual}}
+{\footnotesize\ttfamily int Sistema\+::indice\+Canal\+Atual\hspace{0.3cm}{\ttfamily [private]}}
+
+Nome do canal atualmente selecionado. \Hypertarget{class_sistema_a4e2fd6abc840b34204e5b899983f16e5}\label{class_sistema_a4e2fd6abc840b34204e5b899983f16e5} 
 \index{Sistema@{Sistema}!indiceServerAtual@{indiceServerAtual}}
 \index{indiceServerAtual@{indiceServerAtual}!Sistema@{Sistema}}
 \doxysubsubsection{\texorpdfstring{indiceServerAtual}{indiceServerAtual}}
-{\footnotesize\ttfamily int Sistema\+::indice\+Server\+Atual}
+{\footnotesize\ttfamily int Sistema\+::indice\+Server\+Atual\hspace{0.3cm}{\ttfamily [private]}}
 
-Índice do servidor atualmente selecionado. \Hypertarget{class_sistema_a549026a908a7c93d190e1e537fe8032b}\label{class_sistema_a549026a908a7c93d190e1e537fe8032b} 
-\index{Sistema@{Sistema}!nomeCanalAtual@{nomeCanalAtual}}
-\index{nomeCanalAtual@{nomeCanalAtual}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{nomeCanalAtual}{nomeCanalAtual}}
-{\footnotesize\ttfamily std\+::string Sistema\+::nome\+Canal\+Atual}
-
-Nome do canal atualmente selecionado. \Hypertarget{class_sistema_ac043095da6d7366d07d53fd44e23ef7d}\label{class_sistema_ac043095da6d7366d07d53fd44e23ef7d} 
+Índice do servidor atualmente selecionado. \Hypertarget{class_sistema_ac043095da6d7366d07d53fd44e23ef7d}\label{class_sistema_ac043095da6d7366d07d53fd44e23ef7d} 
 \index{Sistema@{Sistema}!servidores@{servidores}}
 \index{servidores@{servidores}!Sistema@{Sistema}}
 \doxysubsubsection{\texorpdfstring{servidores}{servidores}}
-{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_servidor}{Servidor}}$>$ Sistema\+::servidores}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_servidor}{Servidor}}$>$ Sistema\+::servidores\hspace{0.3cm}{\ttfamily [private]}}
 
 Vetor de servidores criados no sistema. \Hypertarget{class_sistema_a3cb541c9680f62350de9df45c0d3b608}\label{class_sistema_a3cb541c9680f62350de9df45c0d3b608} 
 \index{Sistema@{Sistema}!usuarios@{usuarios}}
 \index{usuarios@{usuarios}!Sistema@{Sistema}}
 \doxysubsubsection{\texorpdfstring{usuarios}{usuarios}}
-{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_usuario}{Usuario}}$>$ Sistema\+::usuarios}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_usuario}{Usuario}}$>$ Sistema\+::usuarios\hspace{0.3cm}{\ttfamily [private]}}
 
 Vetor de usuários registrados no sistema. 
 

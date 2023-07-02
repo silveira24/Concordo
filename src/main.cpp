@@ -1,4 +1,3 @@
-#include <iostream>
 #include <fstream>
 #include "Usuario.h"
 #include "Sistema.h"
@@ -13,7 +12,7 @@ int main() {
 
     std::string linha;
     std::string comando;
-    std::string email, senha, nome, descricao, convite, tipo;
+    std::string email, senha, nome, descricao, convite, tipo, conteudo;
 
     std::cout << "BEM-VINDO AO CONCORDO!!!\n";
 
@@ -182,6 +181,20 @@ int main() {
                 s.sairCanal();
             } else {
                 std::cout << "comando leave-channel com parametros invalidos!!!\n";
+            }
+        } else if(comando == "send-message") {
+            if (posPrimeiroEspaco != std::string::npos){
+                conteudo = linha.substr(posPrimeiroEspaco + 1);
+
+                s.enviarMensagem(conteudo);
+            } else {
+                std::cout << "comando send-message com parametros invalidos!!!\n";
+            }
+        } else if(comando == "list-messages") {
+            if(posPrimeiroEspaco == std::string::npos) {
+                s.listarMensagens();
+            } else {
+                std::cout << "comando list-messages com parametros invalidos!!!\n";
             }
         } else {
             std::cout << "comando invalido!\n";

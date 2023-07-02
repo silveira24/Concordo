@@ -1,0 +1,28 @@
+\doxysection{Canal\+Texto.\+h}
+\hypertarget{_canal_texto_8h_source}{}\label{_canal_texto_8h_source}\index{include/CanalTexto.h@{include/CanalTexto.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CANALTEXTO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CANALTEXTO\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}canal.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_canal_texto}{CanalTexto}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_canal}{Canal}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ std::vector<Mensagem>\ \mbox{\hyperlink{class_canal_texto_affb8d63a2557ecdb20f8bde47a0f26b9}{mensagens}};\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_canal_texto}{CanalTexto}}(std::string\ \mbox{\hyperlink{class_canal_ac5e6d80712597bacacd46c0d153c2644}{nome}});}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_canal_texto_aacde683051f9a965a94538b048eff49c}{getTipo}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_canal_texto_a294b78ea3b7513a89e54c5d1bdfbab1f}{adicionarMensagem}}(\mbox{\hyperlink{class_mensagem}{Mensagem}}\ m)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mensagem}{Mensagem}}\ \mbox{\hyperlink{class_canal_texto_ac122ab059e73f2a157ffce6c3945fabc}{retornaMensagem}}(\textcolor{keywordtype}{int}\ indice)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_canal_texto_ad439d2110311e3d13e48f7fc5aaad279}{tam}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

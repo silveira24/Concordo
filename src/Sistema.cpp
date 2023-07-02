@@ -85,6 +85,9 @@ void Sistema::disconectar() {
     if (this->estado != "deslogado") {
         if(this->estado == "servidor") {
             this->sairServidor();
+        } else if (this->estado == "canal") {
+            this->sairCanal();
+            this->sairServidor();
         }
         std::cout << "Disconectando usuario " << this->usuarios[this->IDuserLogado - 1].getEmail() << std::endl;
         this->estado = "deslogado";
@@ -281,4 +284,56 @@ void Sistema::sairCanal() {
     } else {
         std::cout << "voce precisa estar visualizando um canal para sair dele!\n";
     }
+}
+
+void Sistema::enviarMensagem(std::string conteudo) {
+    
+    auto currentTime = std::chrono::system_clock::now();
+    std::time_t currentTimeT = std::chrono::system_clock::to_time_t(currentTime);
+    std::tm* localTime = std::localtime(&currentTimeT);
+    
+    int year = localTime->tm_year + 1900;
+    int month = localTime->tm_mon + 1;
+    int day = localTime->tm_mday;
+    int hour = localTime->tm_hour;
+    int minute = localTime->tm_min;
+
+    std::stringstream ss;
+    ss << "<" << std::setw(2) << std::setfill('0') << day << "/"
+       << std::setw(2) << std::setfill('0') << month << "/"
+       << year << " - " << std::setw(2) << std::setfill('0') << hour << ":"
+       << std::setw(2) << std::setfill('0') << minute << ">";
+
+    std::string dataHora = ss.str();
+
+
+
+    if(this->estado == "canal") {
+        Mensagem m(dataHora, this->IDuserLogado, conteudo);
+
+        this->servidores[this->indiceServerAtual].enviarMensagemCanal(m, this->indiceCanalAtual);
+    } else {
+        std::cout << "voce precisa estar visualizando um canal para enviar uma mensagem!\n";
+    }
+}
+
+void Sistema::listarMensagens() {
+    if(this->estado == "canal"){
+        if(this->servidores[this->indiceServerAtual].retornaCanal(this->indiceCanalAtual)->getTipo() == "texto") {
+            if(servidores[this->indiceServerAtual].retornaCanal(this->indiceCanalAtual)->tam() == 0) {
+               std::cout << "sem mensagens para exibir!\n"; 
+            }
+            for(int i = 0; i < servidores[this->indiceServerAtual].retornaCanal(this->indiceCanalAtual)->tam(); i++) {
+                this->exibirMensagem(this->servidores[this->indiceServerAtual].retornaCanal(this->indiceCanalAtual)->retornaMensagem(i));
+            }
+        } else {
+            std::cout << "voce precisa estar visualizando um canal de texto para listar as mensagens!\n";
+        }
+    } else {
+        std::cout << "voce precisa estar visualizando um canal de texto para listar as mensagens!\n";
+    }
+}
+
+void Sistema::exibirMensagem(Mensagem m) {
+    std::cout << this->usuarios[m.getEnviadaPor() - 1].getNome() << m.getDataHora() << ":" << m.getConteudo() << std::endl;
 }

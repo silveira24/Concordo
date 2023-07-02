@@ -48,7 +48,12 @@ Remover servidor: "remove-server <nome>"
 Entrar em um servidor: "enter-server <nome> <codigo convite>*" //*se existir
 Sair de um servidor: "leave-server"
 Listar pessoas no servidor: "list-participants"
-
+Listar canais do servidor: "list-channels"
+Criar um canal no servidor: "create-channel <nome> <tipo>"
+Entrar em um canal do servidor: "enter-channel <nome>"
+Sair do canal: "leave-channel"
+Enviar mensagem para o canal: "send-message <mensagem>"
+Visualizar mensagens do canal: "list-messages"
 
 Limitações e Dificuldades
 

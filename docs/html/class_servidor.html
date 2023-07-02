@@ -114,6 +114,25 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:ac1224e90d1e17d155f946e6a0935c25c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servidor.html#ac1224e90d1e17d155f946e6a0935c25c">IDparticipante</a> (int indice)</td></tr>
 <tr class="memdesc:ac1224e90d1e17d155f946e6a0935c25c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o ID de um participante do servidor a partir de um índice.  <br /></td></tr>
 <tr class="separator:ac1224e90d1e17d155f946e6a0935c25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41fb0180bd0f2e08597a3555c3633c6c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servidor.html#a41fb0180bd0f2e08597a3555c3633c6c">existeCanal</a> (std::string <a class="el" href="class_servidor.html#a1141e0835dfba56f4d01f922d2a8b34f">nome</a>, std::string tipo)</td></tr>
+<tr class="memdesc:a41fb0180bd0f2e08597a3555c3633c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se existe um canal com o nome e tipo especificados.  <br /></td></tr>
+<tr class="separator:a41fb0180bd0f2e08597a3555c3633c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9b6a82d3d553035433d45cdb2e6bce9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servidor.html#ad9b6a82d3d553035433d45cdb2e6bce9">retornaIndiceCanal</a> (std::string <a class="el" href="class_servidor.html#a1141e0835dfba56f4d01f922d2a8b34f">nome</a>, std::string tipo)</td></tr>
+<tr class="memdesc:ad9b6a82d3d553035433d45cdb2e6bce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o índice do canal com o nome e tipo especificados.  <br /></td></tr>
+<tr class="separator:ad9b6a82d3d553035433d45cdb2e6bce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0425ac65d1f588151c6076e9f6f6ff1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servidor.html#a0425ac65d1f588151c6076e9f6f6ff1e">criarCanal</a> (std::string <a class="el" href="class_servidor.html#a1141e0835dfba56f4d01f922d2a8b34f">nome</a>, std::string tipo)</td></tr>
+<tr class="memdesc:a0425ac65d1f588151c6076e9f6f6ff1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo canal com o nome e tipo especificados.  <br /></td></tr>
+<tr class="separator:a0425ac65d1f588151c6076e9f6f6ff1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a2ccc1891ceb11f1dbbccbbeb398f31"><td class="memItemLeft" align="right" valign="top"><a id="a3a2ccc1891ceb11f1dbbccbbeb398f31" name="a3a2ccc1891ceb11f1dbbccbbeb398f31"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>listarCanais</b> ()</td></tr>
+<tr class="memdesc:a3a2ccc1891ceb11f1dbbccbbeb398f31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os canais disponíveis no servidor atual. <br /></td></tr>
+<tr class="separator:a3a2ccc1891ceb11f1dbbccbbeb398f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a715ae41e5c299294f6f79a80c04a987f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servidor.html#a715ae41e5c299294f6f79a80c04a987f">enviarMensagemCanal</a> (<a class="el" href="class_mensagem.html">Mensagem</a> m, int indiceCanal)</td></tr>
+<tr class="memdesc:a715ae41e5c299294f6f79a80c04a987f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envia uma mensagem para o canal no índice especificado.  <br /></td></tr>
+<tr class="separator:a715ae41e5c299294f6f79a80c04a987f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73036d14cc895275dd1e6791d8babde9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_canal.html">Canal</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servidor.html#a73036d14cc895275dd1e6791d8babde9">retornaCanal</a> (int indice)</td></tr>
+<tr class="memdesc:a73036d14cc895275dd1e6791d8babde9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o ponteiro para o canal no índice especificado.  <br /></td></tr>
+<tr class="separator:a73036d14cc895275dd1e6791d8babde9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Atributos Privados</h2></td></tr>
@@ -198,6 +217,118 @@ Atributos Privados</h2></td></tr>
 
 </div>
 </div>
+<a id="a0425ac65d1f588151c6076e9f6f6ff1e" name="a0425ac65d1f588151c6076e9f6f6ff1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0425ac65d1f588151c6076e9f6f6ff1e">&#9670;&#160;</a></span>criarCanal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Servidor::criarCanal </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>tipo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cria um novo canal com o nome e tipo especificados. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nome</td><td>O nome do canal a ser criado. </td></tr>
+    <tr><td class="paramname">tipo</td><td>O tipo do canal a ser criado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a715ae41e5c299294f6f79a80c04a987f" name="a715ae41e5c299294f6f79a80c04a987f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a715ae41e5c299294f6f79a80c04a987f">&#9670;&#160;</a></span>enviarMensagemCanal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Servidor::enviarMensagemCanal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mensagem.html">Mensagem</a>&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>indiceCanal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envia uma mensagem para o canal no índice especificado. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>A mensagem a ser enviada. </td></tr>
+    <tr><td class="paramname">indiceCanal</td><td>O índice do canal. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a41fb0180bd0f2e08597a3555c3633c6c" name="a41fb0180bd0f2e08597a3555c3633c6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41fb0180bd0f2e08597a3555c3633c6c">&#9670;&#160;</a></span>existeCanal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Servidor::existeCanal </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>tipo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se existe um canal com o nome e tipo especificados. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nome</td><td>O nome do canal a ser verificado. </td></tr>
+    <tr><td class="paramname">tipo</td><td>O tipo do canal a ser verificado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true se o canal existe, false caso contrário. </dd></dl>
+
+</div>
+</div>
 <a id="a26b0bc0263c27380ced8b2357c757f4e" name="a26b0bc0263c27380ced8b2357c757f4e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26b0bc0263c27380ced8b2357c757f4e">&#9670;&#160;</a></span>getIDdono()</h2>
 
@@ -262,6 +393,71 @@ Atributos Privados</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>ID do participante </dd></dl>
+
+</div>
+</div>
+<a id="a73036d14cc895275dd1e6791d8babde9" name="a73036d14cc895275dd1e6791d8babde9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73036d14cc895275dd1e6791d8babde9">&#9670;&#160;</a></span>retornaCanal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_canal.html">Canal</a> * Servidor::retornaCanal </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>indice</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o ponteiro para o canal no índice especificado. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">indice</td><td>O índice do canal. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Um ponteiro para o canal, ou nullptr se o canal não for encontrado. </dd></dl>
+
+</div>
+</div>
+<a id="ad9b6a82d3d553035433d45cdb2e6bce9" name="ad9b6a82d3d553035433d45cdb2e6bce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b6a82d3d553035433d45cdb2e6bce9">&#9670;&#160;</a></span>retornaIndiceCanal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Servidor::retornaIndiceCanal </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>tipo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o índice do canal com o nome e tipo especificados. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nome</td><td>O nome do canal. </td></tr>
+    <tr><td class="paramname">tipo</td><td>O tipo do canal. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>O índice do canal, ou -1 se o canal não for encontrado. </dd></dl>
 
 </div>
 </div>

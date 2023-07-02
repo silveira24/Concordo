@@ -4,13 +4,26 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CANAL\_H}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CANAL\_H}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_canal}{Canal}}\{}
-\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ std::string\ nome;}
-\DoxyCodeLine{00008\ \};}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Mensagem.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_canal}{Canal}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_canal_ac5e6d80712597bacacd46c0d153c2644}{nome}};\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_canal_ac1b8ce05d8102f8b5f6a9b468336b9b7}{getNome}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_canal_a8c8083daa8552393b5cbc0367af11d3a}{getTipo}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_canal_ae0d584fcf84697bdc0b9600d5f5be5ba}{adicionarMensagem}}(\mbox{\hyperlink{class_mensagem}{Mensagem}}\ m)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_mensagem}{Mensagem}}\ \mbox{\hyperlink{class_canal_a44092d9466f62a84c35c0f50c1360552}{retornaMensagem}}(\textcolor{keywordtype}{int}\ indice)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_canal_aa40640b9f156e259c36fedb3b52f6e9b}{tam}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

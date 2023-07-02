@@ -92,13 +92,53 @@ class Servidor {
          */
         int IDparticipante(int indice);
 
+        /**
+         * @brief Verifica se existe um canal com o nome e tipo especificados.
+         *
+         * @param nome O nome do canal a ser verificado.
+         * @param tipo O tipo do canal a ser verificado.
+         * @return true se o canal existe, false caso contrário.
+         */
         bool existeCanal(std::string nome, std::string tipo);
 
+        /**
+         * @brief Retorna o índice do canal com o nome e tipo especificados.
+         *
+         * @param nome O nome do canal.
+         * @param tipo O tipo do canal.
+         * @return O índice do canal, ou -1 se o canal não for encontrado.
+         */
         int retornaIndiceCanal(std::string nome, std::string tipo);
 
+        /**
+         * @brief Cria um novo canal com o nome e tipo especificados.
+         *
+         * @param nome O nome do canal a ser criado.
+         * @param tipo O tipo do canal a ser criado.
+         */
         void criarCanal(std::string nome, std::string tipo);
 
+        /**
+         * @brief Lista todos os canais disponíveis no servidor atual.
+         */
         void listarCanais();
+
+        /**
+         * @brief Envia uma mensagem para o canal no índice especificado.
+         *
+         * @param m A mensagem a ser enviada.
+         * @param indiceCanal O índice do canal.
+         */
+        void enviarMensagemCanal(Mensagem m, int indiceCanal);
+
+        /**
+         * @brief Retorna o ponteiro para o canal no índice especificado.
+         *
+         * @param indice O índice do canal.
+         * @return Um ponteiro para o canal, ou nullptr se o canal não for encontrado.
+         */
+        Canal* retornaCanal(int indice);
+
 
 };
 

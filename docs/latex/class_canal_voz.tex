@@ -1,0 +1,168 @@
+\doxysection{Referência da Classe Canal\+Voz}
+\hypertarget{class_canal_voz}{}\label{class_canal_voz}\index{CanalVoz@{CanalVoz}}
+
+
+Classe que representa um canal de voz.  
+
+
+
+
+{\ttfamily \#include $<$Canal\+Voz.\+h$>$}
+
+Diagrama de hierarquia da classe Canal\+Voz\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_canal_voz}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_canal_voz_af08207ca2ac3ed46b8bdb812c501099a}{Canal\+Voz}} (std\+::string \mbox{\hyperlink{class_canal_ac5e6d80712597bacacd46c0d153c2644}{nome}})
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_canal_voz}{Canal\+Voz}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_canal_voz_a806ded4ef04350c61f47d89a7936c589}{get\+Tipo}} () const override
+\begin{DoxyCompactList}\small\item\em Obtém o tipo do canal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canal_voz_a9e47f071378b8906171ac9d05ccd5d72}{adicionar\+Mensagem}} (\mbox{\hyperlink{class_mensagem}{Mensagem}} m) const override
+\begin{DoxyCompactList}\small\item\em Adiciona uma mensagem ao canal de voz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mensagem}{Mensagem}} \mbox{\hyperlink{class_canal_voz_a355aeaaf58f2537dd7e7f81aab6bac2f}{retorna\+Mensagem}} (int indice) const override
+\begin{DoxyCompactList}\small\item\em Retorna a ultima mensagem do canal. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_canal_voz_a3e8100ecfcd735ca4c13b3aa09840a04}{tam}} () const override
+\begin{DoxyCompactList}\small\item\em Obtém o tamanho do canal de voz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_canal}{Canal}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_canal_ac1b8ce05d8102f8b5f6a9b468336b9b7}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome do canal. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_canal_a8c8083daa8552393b5cbc0367af11d3a}{get\+Tipo}} () const =0
+\begin{DoxyCompactList}\small\item\em Obtém o tipo do canal. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_canal_ae0d584fcf84697bdc0b9600d5f5be5ba}{adicionar\+Mensagem}} (\mbox{\hyperlink{class_mensagem}{Mensagem}} m) const =0
+\begin{DoxyCompactList}\small\item\em Adiciona uma mensagem ao canal. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_mensagem}{Mensagem}} \mbox{\hyperlink{class_canal_a44092d9466f62a84c35c0f50c1360552}{retorna\+Mensagem}} (int indice) const =0
+\begin{DoxyCompactList}\small\item\em Retorna uma mensagem do canal com base no índice. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_canal_aa40640b9f156e259c36fedb3b52f6e9b}{tam}} () const =0
+\begin{DoxyCompactList}\small\item\em Obtém a quantidade de mensagens que estão armazenadas no canal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mensagem}{Mensagem}} \mbox{\hyperlink{class_canal_voz_a5980806ae2e2360d98c2ef9539a0a8f1}{ultima\+Mensagem}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Outros membros herdados}
+\doxysubsection*{Atributos Protegidos herdados de \mbox{\hyperlink{class_canal}{Canal}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_canal_ac5e6d80712597bacacd46c0d153c2644}{nome}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa um canal de voz. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_canal_voz_af08207ca2ac3ed46b8bdb812c501099a}\label{class_canal_voz_af08207ca2ac3ed46b8bdb812c501099a} 
+\index{CanalVoz@{CanalVoz}!CanalVoz@{CanalVoz}}
+\index{CanalVoz@{CanalVoz}!CanalVoz@{CanalVoz}}
+\doxysubsubsection{\texorpdfstring{CanalVoz()}{CanalVoz()}}
+{\footnotesize\ttfamily Canal\+Voz\+::\+Canal\+Voz (\begin{DoxyParamCaption}\item[{std\+::string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{class_canal_voz}{Canal\+Voz}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & O nome do canal de voz. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_canal_voz_a9e47f071378b8906171ac9d05ccd5d72}\label{class_canal_voz_a9e47f071378b8906171ac9d05ccd5d72} 
+\index{CanalVoz@{CanalVoz}!adicionarMensagem@{adicionarMensagem}}
+\index{adicionarMensagem@{adicionarMensagem}!CanalVoz@{CanalVoz}}
+\doxysubsubsection{\texorpdfstring{adicionarMensagem()}{adicionarMensagem()}}
+{\footnotesize\ttfamily void Canal\+Voz\+::adicionar\+Mensagem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensagem}{Mensagem}}}]{m }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adiciona uma mensagem ao canal de voz. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & A mensagem a ser adicionada. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \mbox{\hyperlink{class_canal_ae0d584fcf84697bdc0b9600d5f5be5ba}{Canal}}.
+
+\Hypertarget{class_canal_voz_a806ded4ef04350c61f47d89a7936c589}\label{class_canal_voz_a806ded4ef04350c61f47d89a7936c589} 
+\index{CanalVoz@{CanalVoz}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!CanalVoz@{CanalVoz}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}}
+{\footnotesize\ttfamily std\+::string Canal\+Voz\+::get\+Tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obtém o tipo do canal. 
+
+\begin{DoxyReturn}{Retorna}
+O tipo do canal de voz. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{class_canal_a8c8083daa8552393b5cbc0367af11d3a}{Canal}}.
+
+\Hypertarget{class_canal_voz_a355aeaaf58f2537dd7e7f81aab6bac2f}\label{class_canal_voz_a355aeaaf58f2537dd7e7f81aab6bac2f} 
+\index{CanalVoz@{CanalVoz}!retornaMensagem@{retornaMensagem}}
+\index{retornaMensagem@{retornaMensagem}!CanalVoz@{CanalVoz}}
+\doxysubsubsection{\texorpdfstring{retornaMensagem()}{retornaMensagem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mensagem}{Mensagem}} Canal\+Voz\+::retorna\+Mensagem (\begin{DoxyParamCaption}\item[{int}]{indice }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retorna a ultima mensagem do canal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em indice} & O índice da mensagem desejada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A ultima mensagem enviada no canal. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{class_canal_a44092d9466f62a84c35c0f50c1360552}{Canal}}.
+
+\Hypertarget{class_canal_voz_a3e8100ecfcd735ca4c13b3aa09840a04}\label{class_canal_voz_a3e8100ecfcd735ca4c13b3aa09840a04} 
+\index{CanalVoz@{CanalVoz}!tam@{tam}}
+\index{tam@{tam}!CanalVoz@{CanalVoz}}
+\doxysubsubsection{\texorpdfstring{tam()}{tam()}}
+{\footnotesize\ttfamily int Canal\+Voz\+::tam (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obtém o tamanho do canal de voz. 
+
+\begin{DoxyReturn}{Retorna}
+retorna 1. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{class_canal_aa40640b9f156e259c36fedb3b52f6e9b}{Canal}}.
+
+
+
+\doxysubsection{Atributos}
+\Hypertarget{class_canal_voz_a5980806ae2e2360d98c2ef9539a0a8f1}\label{class_canal_voz_a5980806ae2e2360d98c2ef9539a0a8f1} 
+\index{CanalVoz@{CanalVoz}!ultimaMensagem@{ultimaMensagem}}
+\index{ultimaMensagem@{ultimaMensagem}!CanalVoz@{CanalVoz}}
+\doxysubsubsection{\texorpdfstring{ultimaMensagem}{ultimaMensagem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mensagem}{Mensagem}} Canal\+Voz\+::ultima\+Mensagem\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+Última mensagem enviada no canal de voz. 
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/Canal\+Voz.\+h\item 
+src/Canal\+Voz.\+cpp\end{DoxyCompactItemize}
