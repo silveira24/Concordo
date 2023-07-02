@@ -56,4 +56,36 @@ set-server-invite-code servidor1
 disconnect
 login email3 senha3
 enter-server servidor1
+create-channel
+create-channel canal_sem_tipo
+create-channel canal_de_voz1 voz
+create-channel canal_de_voz1 voz
+send-message mensagem estando fora de um canal
+enter-channel canal_de_voz1 voz
+send-message
+send-message mensagem de teste
+leave-channel parametro_a_mais
+disconnect
+login email2 senha2
+enter-server servidor1
+create-channel canal_de_texto1 texto
+list-messages
+enter-channel canal texto
+enter-channel canal_de_texto1 texto
+send-message oi
+send-message tudo bem?
+disconnect
+login email3 senha3
+enter-server servidor1
+enter-channel canal_de_texto1 texto
+list-messages
+send-message tudo sim 
+send-message e com vc?
+disconnect
+login email2 senha2
+enter-server servidor1
+enter-channel canal_de_texto1 texto
+list-messages
+send-message to bem tambem
+list-messages
 quit

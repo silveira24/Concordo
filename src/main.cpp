@@ -201,6 +201,6 @@ int main() {
         }
 
     } while (comando != "quit");
-    
+
     return 0;
 }
