@@ -48,6 +48,18 @@ class Servidor {
         int getIDdono();
 
         /**
+         * @brief Obtém a descrição do servidor
+         * @return Descrição do servidor
+         */
+        std::string getDescricao();
+
+        /**
+         * @brief Obtém o código convite do servidor
+         * @return código convite do servidor
+         */
+        std::string getConvite();
+
+        /**
          * @brief Define a descrição do servidor
          * @param descricao Descrição do servidor
          */
@@ -138,6 +150,12 @@ class Servidor {
          * @return Um ponteiro para o canal, ou nullptr se o canal não for encontrado.
          */
         Canal* retornaCanal(int indice);
+
+        /**
+         * @brief Obtém a quantidade de canais no servidor
+         * @return quantidade de canais no servidor
+         */
+        int getTamCanais();
 
 
 };

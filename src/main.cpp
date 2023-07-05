@@ -1,5 +1,3 @@
-#include <fstream>
-#include "Usuario.h"
 #include "Sistema.h"
 
 /**
@@ -16,9 +14,18 @@ int main() {
 
     std::cout << "BEM-VINDO AO CONCORDO!!!\n";
 
+    std::fstream script;
+    script.open("script.txt", std::ios::in);
+
+
     // Loop principal do programa
     do {
-        std::getline(std::cin, linha);
+        if (std::getline(script, linha)){
+
+        } else {
+            std::getline(std::cin, linha);
+        }
+        
         std::size_t posPrimeiroEspaco = linha.find(' ');
         std::size_t posSegundoEspaco = linha.find(' ', posPrimeiroEspaco + 1);
         std::size_t posTerceiroEspaco = linha.find(' ', posSegundoEspaco + 1);
@@ -85,7 +92,7 @@ int main() {
             std::string resto = linha.substr(posSegundaAspa + 1);
             if(posSegundoEspaco != std::string::npos && posPrimeiraAspa != std::string::npos && posSegundaAspa != std::string::npos && resto == "") {
                 nome = linha.substr(posPrimeiroEspaco + 1, posSegundoEspaco - posPrimeiroEspaco - 1);
-                descricao = linha.substr(posSegundoEspaco + 1);
+                descricao = linha.substr(posPrimeiraAspa + 1, posSegundaAspa - posPrimeiraAspa - 1);
 
                 // Define a descrição do servidor
                 s.mudarDescricaoServidor(nome, descricao);
@@ -201,6 +208,8 @@ int main() {
         }
 
     } while (comando != "quit");
+
+    script.close();
 
     return 0;
 }

@@ -578,6 +578,7 @@ CMakeFiles/Concordo.dir/src/Sistema.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\ 
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/cxxabi_forced.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/exception_defines.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/exception_ptr.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/fstream.tcc \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/functexcept.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/functional_hash.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/hash_bytes.h \
@@ -639,6 +640,7 @@ CMakeFiles/Concordo.dir/src/Sistema.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\ 
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ext/numeric_traits.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ext/string_conversions.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ext/type_traits.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/fstream \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/initializer_list \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/iomanip \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ios \
@@ -648,8 +650,10 @@ CMakeFiles/Concordo.dir/src/Sistema.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\ 
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/limits \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/locale \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/atomic_word.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/basic_file.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++allocator.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++config.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++io.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++locale.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/cpu_defines.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/ctype_base.h \
@@ -1159,6 +1163,8 @@ D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Usuario.h:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/array:
 
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/fstream.tcc:
+
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_conv.h:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_facets_nonio.h:
@@ -1185,6 +1191,10 @@ C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/iomanip:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/limits:
 
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/basic_file.h:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++io.h:
+
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/messages_members.h:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/time_members.h:
@@ -1200,9 +1210,3 @@ C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/utility:
 D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/src/Usuario.cpp:
 
 D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/src/main.cpp:
-
-C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/fstream.tcc:
-
-C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/basic_file.h:
-
-C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++io.h:

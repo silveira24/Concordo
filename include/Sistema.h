@@ -7,6 +7,7 @@
 #include <chrono>
 #include <ctime>
 #include <iomanip>
+#include <fstream>
 #include "Usuario.h"
 #include "Servidor.h"
 
@@ -25,6 +26,8 @@ private:
     int indiceCanalAtual; /**< Nome do canal atualmente selecionado. */
     int contID; /**< Contador de IDs de usuários. */
     std::string estado; /**< Estado do sistema (deslogado, logado, em um servidor, ou em um canal). */
+    void salvarUsuarios();
+    void salvarServidores();
 
 public:
     /**
@@ -171,6 +174,8 @@ public:
      * @param m A mensagem a ser exibida.
      */
     void exibirMensagem(Mensagem m);
+
+    void salvar();
 
 };
 

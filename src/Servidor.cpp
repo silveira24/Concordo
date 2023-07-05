@@ -21,6 +21,14 @@ int Servidor::getIDdono(){
     return this->usuarioDonoId;
 }
 
+std::string Servidor::getDescricao() {
+    return this->descricao;
+}
+
+std::string Servidor::getConvite() {
+    return this->codigoConvite;
+}
+
 void Servidor::setDescricao(std::string descricao) {
     this->descricao = descricao;
 }
@@ -117,4 +125,8 @@ Canal* Servidor::retornaCanal(int indice) {
         return this->canais[indice];
     }
     return nullptr;
+}
+
+int Servidor::getTamCanais() {
+    return this->canais.size();
 }

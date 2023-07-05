@@ -1,0 +1,43 @@
+2
+1
+servidor1
+descrição completa dentro de aspas
+
+3
+1
+2
+3
+2
+canal_de_voz1
+voz
+1
+3
+<05/07/2023 - 14:51>
+mensagem de teste
+canal_de_texto1
+texto
+5
+2
+<05/07/2023 - 14:51>
+oi
+2
+<05/07/2023 - 14:51>
+tudo bem?
+3
+<05/07/2023 - 14:51>
+tudo sim 
+3
+<05/07/2023 - 14:51>
+e com vc?
+2
+<05/07/2023 - 14:51>
+to bem tambem
+1
+servidor2
+
+
+3
+1
+2
+3
+0

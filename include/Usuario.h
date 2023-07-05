@@ -45,6 +45,12 @@ class Usuario {
         int getID();
 
         /**
+         * @brief Obtém a senha do usuário
+         * @return senha do usuário
+         */
+        std::string getSenha();
+
+        /**
          * @brief Verifica se a senha fornecida corresponde à senha do usuário
          * @param senha Senha a ser verificada
          * @return true se as senhas coincidirem, false caso contrário

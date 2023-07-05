@@ -19,6 +19,10 @@ int Usuario::getID() {
     return this->id;
 }
 
+std::string Usuario::getSenha() {
+    return this->senha;
+}
+
 bool Usuario::confereSenha(std::string senha) {
     if (this->senha == senha) {
         return true;
