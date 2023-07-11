@@ -13,18 +13,13 @@ int main() {
     std::string email, senha, nome, descricao, convite, tipo, conteudo;
 
     std::cout << "BEM-VINDO AO CONCORDO!!!\n";
-
-    std::fstream script;
-    script.open("script.txt", std::ios::in);
-
-
+    s.carregar();
+    
     // Loop principal do programa
     do {
-        if (std::getline(script, linha)){
-
-        } else {
-            std::getline(std::cin, linha);
-        }
+        
+        std::getline(std::cin, linha);
+        
         
         std::size_t posPrimeiroEspaco = linha.find(' ');
         std::size_t posSegundoEspaco = linha.find(' ', posPrimeiroEspaco + 1);
@@ -209,7 +204,7 @@ int main() {
 
     } while (comando != "quit");
 
-    script.close();
+    //s.salvar();
 
     return 0;
 }

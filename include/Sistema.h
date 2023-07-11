@@ -28,6 +28,9 @@ private:
     std::string estado; /**< Estado do sistema (deslogado, logado, em um servidor, ou em um canal). */
     void salvarUsuarios();
     void salvarServidores();
+    void carregarUsuarios();
+    void carregarServidores();
+    void limparSistema();
 
 public:
     /**
@@ -176,6 +179,8 @@ public:
     void exibirMensagem(Mensagem m);
 
     void salvar();
+
+    void carregar();
 
 };
 

@@ -14,7 +14,7 @@ void Sistema::criarUsuario (std::string email, std::string senha, std::string no
             Usuario u(email, senha, nome, this->contID);
             this->usuarios.push_back(u);
             std::cout << "Usuario criado!\n";
-            this->salvar();
+            //this->salvar();
         } else {
             std::cout << "Usuario já existe!\n";
         }
@@ -105,7 +105,7 @@ void Sistema::criarServidor(std::string nome) {
             s.adicionaParticipante(this->IDuserLogado);
             this->servidores.push_back(s);
             std::cout << "Servidor criado!\n";
-            this->salvar();
+            //this->salvar();
         } else {
             std::cout << "Servidor com esse nome ja existe!\n";
         }
@@ -121,7 +121,7 @@ void Sistema::mudarDescricaoServidor(std::string nomeServidor, std::string descr
             if(this->IDuserLogado == this->servidores[indice].getIDdono()){
                 this->servidores[indice].setDescricao(descricao);
                 std::cout << "Descricao do servidor " << nomeServidor << " modificada!\n";
-                this->salvar();
+                //this->salvar();
             } else {
                 std::cout << "Voce nao pode alterar a descricao de um servidor que nao foi criado por voce\n";
             }
@@ -145,7 +145,7 @@ void Sistema::setConvite(std::string nomeServidor, std::string convite) {
                 } else {
                     std::cout << "Codigo de convite do servidor " << nomeServidor << " removido!\n";
                 }
-                this->salvar();
+                //this->salvar();
             } else {
                 std::cout << "Voce nao pode alterar o codigo de convite de um servidor que nao foi criado por voce\n";
             }
@@ -174,7 +174,7 @@ void Sistema::removerServidor(std::string nome) {
             if(this->servidores[indice].getIDdono() == this->IDuserLogado) {
                 this->servidores.erase(this->servidores.begin() + indice);
                 std::cout << "servidor '" << nome << "' removido!\n";
-                this->salvar();
+                //this->salvar();
             } else {
                 std::cout << "voce nao eh dono do servidor '" << nome << "'!\n";
             }
@@ -238,7 +238,7 @@ void Sistema::criarCanalServidorAtual(std::string nome, std::string tipo){
             if(!this->servidores[this->indiceServerAtual].existeCanal(nome, tipo)){
                 this->servidores[this->indiceServerAtual].criarCanal(nome, tipo);
                 std::cout << "Canal de " << tipo << " '" << nome << "' criado!\n";
-                this->salvar();
+                //this->salvar();
             } else {
                 if(tipo == "texto") {
                     std::cout << "canal de texto '" << nome << "' ja existe!\n";
@@ -318,7 +318,7 @@ void Sistema::enviarMensagem(std::string conteudo) {
         Mensagem m(dataHora, this->IDuserLogado, conteudo);
 
         this->servidores[this->indiceServerAtual].enviarMensagemCanal(m, this->indiceCanalAtual);
-        this->salvar();
+        //this->salvar();
     } else {
         std::cout << "voce precisa estar visualizando um canal para enviar uma mensagem!\n";
     }
@@ -407,5 +407,100 @@ void Sistema::salvarServidores() {
         arquivo.close();
     } else {
         std::cout << "nao foi possivel salvar os dados dos Servidores!\n";
+    }
+}
+
+void Sistema::carregar() {
+    //this->limparSistema();
+    this->carregarUsuarios();
+    this->carregarServidores();
+}
+
+void Sistema::carregarUsuarios() {
+    std::ifstream arquivo("usuarios.txt");
+
+    if(arquivo.is_open()) {
+        std::string tamanho, nome, email, senha, id;
+
+        std::getline(arquivo, tamanho);
+
+        int tam = std::stoi(tamanho);
+
+        for(int i = 0; i < tam; i++) {
+            std::getline(arquivo, id);
+            int ID = std::stoi(id);
+            std::getline(arquivo, nome);
+            std::getline(arquivo, email);
+            std::getline(arquivo, senha);
+
+            Usuario u(email, senha, nome, ID);
+            this->usuarios.push_back(u);
+        }
+
+        arquivo.close();
+    } else {
+        std::cout << "nao foi possivel carregar os dados dos usuarios!\n";
+    }
+}
+
+void Sistema::carregarServidores() {
+    std::ifstream arquivo("servidores.txt");
+
+    if(arquivo.is_open()) {
+        std::string tamanho, ID, nome, descricao, convite, participantes, participante;
+        std::string tamanhoCanais, nomeCanal, tipo, tamanhoMensagens;
+        std::string IDuser, dataHora, conteudo;
+
+        std::getline(arquivo, tamanho);
+        int tam = std::stoi(tamanho);
+
+        for(int i = 0; i < tam; i++) {
+            std::getline(arquivo, ID);
+            int IDDono = std::stoi(ID);
+            std::getline(arquivo, nome);
+            Servidor s(nome, IDDono);
+            this->servidores.push_back(s);
+            std::getline(arquivo, descricao);
+            this->servidores[i].setDescricao(descricao);
+            std::getline(arquivo, convite);
+            this->servidores[i].setConvite(convite);
+            std::getline(arquivo, participantes);
+            int tamParticipantes = std::stoi(participantes);
+            for(int j = 0; j < tamParticipantes; j++) {
+                std::getline(arquivo, participante);
+                int part = std::stoi(participante);
+                this->servidores[i].adicionaParticipante(part);
+            }
+            std::getline(arquivo, tamanhoCanais);
+            int tamCanais = std::stoi(tamanhoCanais);
+            for(int k = 0; k < tamCanais; k++) {
+                std::getline(arquivo, nomeCanal);
+                std::getline(arquivo, tipo);
+                //this->servidores[k].criarCanal(nomeCanal, tipo);
+                std::getline(arquivo, tamanhoMensagens);
+                int tamMensagens = std::stoi(tamanhoMensagens);
+                for(int l = 0; l < tamMensagens; l++) {
+                    std::getline(arquivo, IDuser);
+                    int enviadaPor = std::stoi(IDuser);
+                    std::getline(arquivo, dataHora);
+                    std::getline(arquivo, conteudo);
+
+                    Mensagem m(dataHora, enviadaPor, conteudo);
+
+                    //this->servidores[i].enviarMensagemCanal(m, j);
+                }
+            }
+        }
+        arquivo.close();      
+    } else {
+        std::cout << "nao foi possivel carregar os dados dos servidores!\n";
+    }
+}
+
+void Sistema::limparSistema() {
+    this->contID = 0;
+    this->usuarios.clear();
+    while(this->servidores.size() > 0) {
+        this->servidores.erase(this->servidores.begin());
     }
 }
