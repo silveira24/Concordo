@@ -110,9 +110,9 @@ CMakeFiles/Concordo.dir/src/Canal.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\ -\
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/stdint.h
 
 CMakeFiles/Concordo.dir/src/CanalTexto.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/src/CanalTexto.cpp \
+  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Canal.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalTexto.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Mensagem.h \
-  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Canal.h \
   C:/MinGW/include/_mingw.h \
   C:/MinGW/include/ctype.h \
   C:/MinGW/include/direct.h \
@@ -225,9 +225,9 @@ CMakeFiles/Concordo.dir/src/CanalTexto.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/stdint.h
 
 CMakeFiles/Concordo.dir/src/CanalVoz.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/src/CanalVoz.cpp \
+  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Canal.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalVoz.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Mensagem.h \
-  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Canal.h \
   C:/MinGW/include/_mingw.h \
   C:/MinGW/include/ctype.h \
   C:/MinGW/include/direct.h \
@@ -419,11 +419,11 @@ CMakeFiles/Concordo.dir/src/Mensagem.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/stdint.h
 
 CMakeFiles/Concordo.dir/src/Servidor.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/src/Servidor.cpp \
+  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Canal.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalTexto.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalVoz.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Mensagem.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Servidor.h \
-  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Canal.h \
   C:/MinGW/include/_mingw.h \
   C:/MinGW/include/ctype.h \
   C:/MinGW/include/direct.h \
@@ -536,13 +536,13 @@ CMakeFiles/Concordo.dir/src/Servidor.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/stdint.h
 
 CMakeFiles/Concordo.dir/src/Sistema.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/src/Sistema.cpp \
+  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Canal.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalTexto.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalVoz.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Mensagem.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Servidor.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Sistema.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Usuario.h \
-  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Canal.h \
   C:/MinGW/include/_mingw.h \
   C:/MinGW/include/ctype.h \
   C:/MinGW/include/direct.h \
@@ -766,13 +766,13 @@ CMakeFiles/Concordo.dir/src/Usuario.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\ 
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/stdint.h
 
 CMakeFiles/Concordo.dir/src/main.cpp.obj: D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/src/main.cpp \
+  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Canal.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalTexto.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalVoz.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Mensagem.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Servidor.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Sistema.h \
   D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Usuario.h \
-  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Canal.h \
   C:/MinGW/include/_mingw.h \
   C:/MinGW/include/ctype.h \
   C:/MinGW/include/direct.h \

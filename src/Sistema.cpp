@@ -158,13 +158,13 @@ void Sistema::setConvite(std::string nomeServidor, std::string convite) {
 }
 
 void Sistema::listarServidores() {
-    if(this->estado != "deslogado"){
+    //if(this->estado != "deslogado"){
         for(int i = 0; i < this->servidores.size(); i++) {
             std::cout << this->servidores[i].getNome() << std::endl;
         }
-    } else {
+    /*} else {
         std::cout << "precisa estar logado para ver a lista de servidores!\n";
-    }
+    }*/
 }
 
 void Sistema::removerServidor(std::string nome) {
@@ -172,6 +172,7 @@ void Sistema::removerServidor(std::string nome) {
         if(this->serverExiste(nome)) {
             int indice = this->retornaIndiceServidor(nome);
             if(this->servidores[indice].getIDdono() == this->IDuserLogado) {
+                this->servidores[indice].limparCanais();
                 this->servidores.erase(this->servidores.begin() + indice);
                 std::cout << "servidor '" << nome << "' removido!\n";
                 //this->salvar();
@@ -411,7 +412,7 @@ void Sistema::salvarServidores() {
 }
 
 void Sistema::carregar() {
-    //this->limparSistema();
+    this->limparSistema();
     this->carregarUsuarios();
     this->carregarServidores();
 }
@@ -444,6 +445,7 @@ void Sistema::carregarUsuarios() {
 }
 
 void Sistema::carregarServidores() {
+
     std::ifstream arquivo("servidores.txt");
 
     if(arquivo.is_open()) {
@@ -459,24 +461,24 @@ void Sistema::carregarServidores() {
             int IDDono = std::stoi(ID);
             std::getline(arquivo, nome);
             Servidor s(nome, IDDono);
-            this->servidores.push_back(s);
+            //this->servidores.push_back(s);
             std::getline(arquivo, descricao);
-            this->servidores[i].setDescricao(descricao);
+            s.setDescricao(descricao);
             std::getline(arquivo, convite);
-            this->servidores[i].setConvite(convite);
+            s.setConvite(convite);
             std::getline(arquivo, participantes);
             int tamParticipantes = std::stoi(participantes);
             for(int j = 0; j < tamParticipantes; j++) {
                 std::getline(arquivo, participante);
                 int part = std::stoi(participante);
-                this->servidores[i].adicionaParticipante(part);
+                s.adicionaParticipante(part);
             }
             std::getline(arquivo, tamanhoCanais);
             int tamCanais = std::stoi(tamanhoCanais);
             for(int k = 0; k < tamCanais; k++) {
                 std::getline(arquivo, nomeCanal);
                 std::getline(arquivo, tipo);
-                //this->servidores[k].criarCanal(nomeCanal, tipo);
+                s.criarCanal(nomeCanal, tipo);
                 std::getline(arquivo, tamanhoMensagens);
                 int tamMensagens = std::stoi(tamanhoMensagens);
                 for(int l = 0; l < tamMensagens; l++) {
@@ -487,11 +489,12 @@ void Sistema::carregarServidores() {
 
                     Mensagem m(dataHora, enviadaPor, conteudo);
 
-                    //this->servidores[i].enviarMensagemCanal(m, j);
+                    s.enviarMensagemCanal(m, k);
                 }
             }
+            this->servidores.push_back(s);
         }
-        arquivo.close();      
+        arquivo.close();
     } else {
         std::cout << "nao foi possivel carregar os dados dos servidores!\n";
     }
@@ -500,7 +503,12 @@ void Sistema::carregarServidores() {
 void Sistema::limparSistema() {
     this->contID = 0;
     this->usuarios.clear();
-    while(this->servidores.size() > 0) {
-        this->servidores.erase(this->servidores.begin());
+    this->limparCanaisServidores();
+    this->servidores.clear();
+}
+
+void Sistema::limparCanaisServidores() {
+    for(int i = 0; i < this->servidores.size(); i++) {
+        this->servidores[i].limparCanais();
     }
 }

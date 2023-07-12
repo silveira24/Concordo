@@ -11,65 +11,78 @@
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <chrono>}}
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <ctime>}}
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iomanip>}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Usuario.h"{}}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Servidor.h"{}}}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sistema}{Sistema}}\ \{}
-\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00021\ \ \ \ \ std::vector<Usuario>\ \mbox{\hyperlink{class_sistema_a3cb541c9680f62350de9df45c0d3b608}{usuarios}};\ }
-\DoxyCodeLine{00022\ \ \ \ \ std::vector<Servidor>\ \mbox{\hyperlink{class_sistema_ac043095da6d7366d07d53fd44e23ef7d}{servidores}};\ }
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sistema_ab25dde86a72aabad9ecdeee42973fc1e}{IDuserLogado}};\ }
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sistema_a4e2fd6abc840b34204e5b899983f16e5}{indiceServerAtual}};\ }
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sistema_a0d45ada1322df96301cc994a3246a074}{indiceCanalAtual}};\ }
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sistema_af343898a8031753dc0048ee9e6ceb303}{contID}};\ }
-\DoxyCodeLine{00027\ \ \ \ \ std::string\ \mbox{\hyperlink{class_sistema_a42b0bd1068eb45fec78c3e2466b31015}{estado}};\ }
-\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_sistema_a815b07845ef6b03247b239333fe75e28}{Sistema}}();}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a9c59f66f98b2e4ab07367b80b490afa2}{criarUsuario}}(std::string\ email,\ std::string\ senha,\ std::string\ nome);}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sistema_abf5d9db5456eb609d29005c81163fbfa}{emailUsado}}(std::string\ email);}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Usuario.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Servidor.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sistema}{Sistema}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ std::vector<Usuario>\ \mbox{\hyperlink{class_sistema_a3cb541c9680f62350de9df45c0d3b608}{usuarios}};\ }
+\DoxyCodeLine{00023\ \ \ \ \ std::vector<Servidor>\ \mbox{\hyperlink{class_sistema_ac043095da6d7366d07d53fd44e23ef7d}{servidores}};\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sistema_ab25dde86a72aabad9ecdeee42973fc1e}{IDuserLogado}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sistema_a4e2fd6abc840b34204e5b899983f16e5}{indiceServerAtual}};\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sistema_a0d45ada1322df96301cc994a3246a074}{indiceCanalAtual}};\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sistema_af343898a8031753dc0048ee9e6ceb303}{contID}};\ }
+\DoxyCodeLine{00028\ \ \ \ \ std::string\ \mbox{\hyperlink{class_sistema_a42b0bd1068eb45fec78c3e2466b31015}{estado}};\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a817ea823866d39461d33070b767fc8e6}{salvarUsuarios}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a2c089769cc448b35ef28af4fc1edc8d6}{salvarServidores}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_aa3a447f5b25990c54a913124d3bb59dc}{carregarUsuarios}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_aa74c5118001598df07380cf2a05f236e}{carregarServidores}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_af7da817dbcfd169a62162e6837834071}{limparSistema}}();}
 \DoxyCodeLine{00049\ }
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sistema_a6495331bc3a2d6ff7d12e41879536570}{serverExiste}}(std::string\ nome);}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sistema_a8fe1a5b92a3101fcec7b3e8433a4c57a}{retornaIndiceServidor}}(std::string\ nome);}
+\DoxyCodeLine{00050\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_sistema_a815b07845ef6b03247b239333fe75e28}{Sistema}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a9c59f66f98b2e4ab07367b80b490afa2}{criarUsuario}}(std::string\ email,\ std::string\ senha,\ std::string\ nome);}
 \DoxyCodeLine{00063\ }
-\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_aff62f1f20362eeed65487601e033767b}{login}}(std::string\ email,\ std::string\ senha);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sistema_abf5d9db5456eb609d29005c81163fbfa}{emailUsado}}(std::string\ email);}
 \DoxyCodeLine{00070\ }
-\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a069007a2918324f55f026608a6a9d7a0}{disconectar}}();}
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a585341b4af739bfe6e2d4b82bc6f9c8a}{criarServidor}}(std::string\ nome);}
-\DoxyCodeLine{00081\ }
-\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_ab8a367be5ba34bf10b99447e0d664e99}{mudarDescricaoServidor}}(std::string\ nomeServidor,\ std::string\ descricao);}
-\DoxyCodeLine{00088\ }
-\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a1a61787be6af84c75c4eb83dae134112}{setConvite}}(std::string\ nomeServidor,\ std::string\ convite);}
-\DoxyCodeLine{00095\ }
-\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a658148953b6f87feee12378d112281e7}{listarServidores}}();}
-\DoxyCodeLine{00100\ }
-\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a2b1925e171fa04df9867d25d57d52e1a}{removerServidor}}(std::string\ nome);}
-\DoxyCodeLine{00106\ }
-\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a5075fc2609f9da6e91ca96f1ca763c88}{entrarServidor}}(std::string\ nome,\ std::string\ convite);}
-\DoxyCodeLine{00113\ }
-\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a7d28ff1a20471e76729dd1e12e6fc2f5}{sairServidor}}();}
-\DoxyCodeLine{00118\ }
-\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a6101584f6f5ef9a8724c2c49a59a3800}{listarParticipantes}}();}
-\DoxyCodeLine{00123\ }
-\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_ace3fe8638037b4551799db1fd8c58144}{criarCanalServidorAtual}}(std::string\ nome,\ std::string\ tipo);}
-\DoxyCodeLine{00137\ }
-\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_aabd3db1a0ef7ebf60c2ce23a056e96d4}{listarCanaisServidorAtual}}();}
-\DoxyCodeLine{00142\ }
-\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_aca1eaa06eab3d7f8ac3a55d333d86b89}{entrarCanal}}(std::string\ nome,\ std::string\ tipo);}
-\DoxyCodeLine{00150\ }
-\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a8d3548d307127df93271c7f496190849}{sairCanal}}();}
-\DoxyCodeLine{00155\ }
-\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a05bed506bbb62badac0f6efa2355f212}{enviarMensagem}}(std::string\ conteudo);}
-\DoxyCodeLine{00162\ }
-\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a66243daa152a10d9b3d72d665f2765ec}{listarMensagens}}();}
-\DoxyCodeLine{00167\ }
-\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a9d838d1cec7987c646f467bfb80b6da8}{exibirMensagem}}(\mbox{\hyperlink{class_mensagem}{Mensagem}}\ m);}
-\DoxyCodeLine{00174\ }
-\DoxyCodeLine{00175\ \};}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sistema_a6495331bc3a2d6ff7d12e41879536570}{serverExiste}}(std::string\ nome);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sistema_a8fe1a5b92a3101fcec7b3e8433a4c57a}{retornaIndiceServidor}}(std::string\ nome);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_aff62f1f20362eeed65487601e033767b}{login}}(std::string\ email,\ std::string\ senha);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a069007a2918324f55f026608a6a9d7a0}{disconectar}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a585341b4af739bfe6e2d4b82bc6f9c8a}{criarServidor}}(std::string\ nome);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_ab8a367be5ba34bf10b99447e0d664e99}{mudarDescricaoServidor}}(std::string\ nomeServidor,\ std::string\ descricao);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a1a61787be6af84c75c4eb83dae134112}{setConvite}}(std::string\ nomeServidor,\ std::string\ convite);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a658148953b6f87feee12378d112281e7}{listarServidores}}();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a2b1925e171fa04df9867d25d57d52e1a}{removerServidor}}(std::string\ nome);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a5075fc2609f9da6e91ca96f1ca763c88}{entrarServidor}}(std::string\ nome,\ std::string\ convite);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a7d28ff1a20471e76729dd1e12e6fc2f5}{sairServidor}}();}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a6101584f6f5ef9a8724c2c49a59a3800}{listarParticipantes}}();}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_ace3fe8638037b4551799db1fd8c58144}{criarCanalServidorAtual}}(std::string\ nome,\ std::string\ tipo);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_aabd3db1a0ef7ebf60c2ce23a056e96d4}{listarCanaisServidorAtual}}();}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_aca1eaa06eab3d7f8ac3a55d333d86b89}{entrarCanal}}(std::string\ nome,\ std::string\ tipo);}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a8d3548d307127df93271c7f496190849}{sairCanal}}();}
 \DoxyCodeLine{00176\ }
-\DoxyCodeLine{00177\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a05bed506bbb62badac0f6efa2355f212}{enviarMensagem}}(std::string\ conteudo);}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a66243daa152a10d9b3d72d665f2765ec}{listarMensagens}}();}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a9d838d1cec7987c646f467bfb80b6da8}{exibirMensagem}}(\mbox{\hyperlink{class_mensagem}{Mensagem}}\ m);}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a118d16dc0bcefb5bbe29bdfd471def2c}{salvar}}();}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_a811a732f691bb1d231ce11458dd42539}{carregar}}();}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sistema_ae9e5eb79069d5ef512d7cc2f32129015}{limparCanaisServidores}}();}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \};}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

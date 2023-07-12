@@ -7,10 +7,10 @@ Servidor::Servidor(std::string nome, int IDdono){
 }
 
 Servidor::~Servidor() {
-    while(this->canais.size() != 0){
+    /*while(this->canais.size() != 0){
         delete this->canais[0];
         this->canais.erase(this->canais.begin()); 
-    }
+    }*/
 }
 
 std::string Servidor::getNome(){
@@ -129,4 +129,11 @@ Canal* Servidor::retornaCanal(int indice) {
 
 int Servidor::getTamCanais() {
     return this->canais.size();
+}
+
+void Servidor::limparCanais() {
+    while(this->canais.size() > 0) {
+        delete this->canais[0];
+        this->canais.erase(this->canais.begin());
+    }
 }

@@ -139,6 +139,6 @@ CMakeFiles/Concordo.dir/src/main.cpp.obj: \
  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Usuario.h \
  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Servidor.h \
  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalTexto.h \
- D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/canal.h \
+ D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Canal.h \
  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Mensagem.h \
  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalVoz.h

@@ -108,6 +108,6 @@ CMakeFiles/Concordo.dir/src/Servidor.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\istream \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\istream.tcc \
  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalTexto.h \
- D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/canal.h \
+ D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Canal.h \
  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Mensagem.h \
  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalVoz.h

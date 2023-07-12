@@ -26,10 +26,25 @@ private:
     int indiceCanalAtual; /**< Nome do canal atualmente selecionado. */
     int contID; /**< Contador de IDs de usuários. */
     std::string estado; /**< Estado do sistema (deslogado, logado, em um servidor, ou em um canal). */
+    /**
+    * @brief Salva os usuários registrados no sistema no arquivo usuarios.txt.
+    */
     void salvarUsuarios();
+    /**
+    * @brief Salva os servidores criados no sistema no arquivo servidores.txt.
+    */
     void salvarServidores();
+    /**
+    * @brief Carrega os usuários registrados previamente no arquivo usuarios.txt.
+    */
     void carregarUsuarios();
+    /**
+    * @brief Carrega os servidores registrados previamente no arquivo servidores.txt.
+    */
     void carregarServidores();
+    /**
+    * @brief Limpa o sistema, removendo todos os usuários e servidores.
+    */
     void limparSistema();
 
 public:
@@ -178,9 +193,29 @@ public:
      */
     void exibirMensagem(Mensagem m);
 
+    /**
+     * @brief Salva o estado atual do sistema em arquivos.
+     *
+     * Esta função salva os usuários e servidores do sistema em arquivos separados.
+     * Os usuários são salvos no arquivo "usuarios.txt" e os servidores no arquivo "servidores.txt".
+     */
     void salvar();
 
+    /**
+     * @brief Carrega o estado anteriormente salvo do sistema a partir de arquivos.
+     *
+     * Esta função carrega os usuários e servidores previamente salvos nos arquivos "usuarios.txt" e "servidores.txt",
+     * respectivamente, e os carrega para o sistema.
+     */
     void carregar();
+
+    /**
+     * @brief Limpa os canais de todos os servidores.
+     *
+     * Esta função percorre todos os servidores do sistema e remove todos os canais presentes em cada um deles.
+     * Os canais são removidos, liberando a memória alocada para eles.
+     */
+    void limparCanaisServidores();
 
 };
 

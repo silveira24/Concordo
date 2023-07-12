@@ -1,7 +1,7 @@
 #ifndef CANALVOZ_H
 #define CANALVOZ_H
 
-#include "canal.h"
+#include "Canal.h"
 
 /**
  * @brief Classe que representa um canal de voz.

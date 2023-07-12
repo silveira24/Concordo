@@ -157,6 +157,10 @@ class Servidor {
          */
         int getTamCanais();
 
+        /**
+         * @brief desaloca a memoria alocada dinamicamente pelos canais do servidor
+         */
+        void limparCanais();
 
 };
 

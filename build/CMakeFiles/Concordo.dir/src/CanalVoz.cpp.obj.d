@@ -1,7 +1,7 @@
 CMakeFiles/Concordo.dir/src/CanalVoz.cpp.obj: \
  D:\Meus\ Documentos\docs\Ufrn\LP1\ -\ Sidemar\Concordo\src\CanalVoz.cpp \
  D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/CanalVoz.h \
- D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/canal.h \
+ D:/Meus\ Documentos/docs/Ufrn/LP1\ -\ Sidemar/Concordo/include/Canal.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\c++config.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\os_defines.h \

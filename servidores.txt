@@ -1,4 +1,4 @@
-2
+3
 1
 servidor1
 descrição completa dentro de aspas
@@ -41,3 +41,27 @@ servidor2
 2
 3
 0
+3
+s1
+
+
+3
+3
+1
+2
+1
+canalDeTexto
+texto
+4
+3
+<11/07/2023 - 23:06>
+teste
+1
+<11/07/2023 - 23:09>
+outro teste
+3
+<11/07/2023 - 23:11>
+mudando de conta
+1
+<11/07/2023 - 23:11>
+dois prompts abertos

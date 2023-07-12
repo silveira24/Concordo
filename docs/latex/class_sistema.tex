@@ -63,7 +63,31 @@ void \mbox{\hyperlink{class_sistema_a05bed506bbb62badac0f6efa2355f212}{enviar\+M
 void {\bfseries listar\+Mensagens} ()
 \begin{DoxyCompactList}\small\item\em Lista as mensagens do canal atual. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_sistema_a9d838d1cec7987c646f467bfb80b6da8}{exibir\+Mensagem}} (\mbox{\hyperlink{class_mensagem}{Mensagem}} m)
-\begin{DoxyCompactList}\small\item\em Exibe uma mensagem específica. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Exibe uma mensagem específica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sistema_a118d16dc0bcefb5bbe29bdfd471def2c}{salvar}} ()
+\begin{DoxyCompactList}\small\item\em Salva o estado atual do sistema em arquivos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sistema_a811a732f691bb1d231ce11458dd42539}{carregar}} ()
+\begin{DoxyCompactList}\small\item\em Carrega o estado anteriormente salvo do sistema a partir de arquivos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sistema_ae9e5eb79069d5ef512d7cc2f32129015}{limpar\+Canais\+Servidores}} ()
+\begin{DoxyCompactList}\small\item\em Limpa os canais de todos os servidores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros privados}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sistema_a817ea823866d39461d33070b767fc8e6}\label{class_sistema_a817ea823866d39461d33070b767fc8e6} 
+void {\bfseries salvar\+Usuarios} ()
+\begin{DoxyCompactList}\small\item\em Salva os usuários registrados no sistema no arquivo usuarios.\+txt. \end{DoxyCompactList}\item 
+\Hypertarget{class_sistema_a2c089769cc448b35ef28af4fc1edc8d6}\label{class_sistema_a2c089769cc448b35ef28af4fc1edc8d6} 
+void {\bfseries salvar\+Servidores} ()
+\begin{DoxyCompactList}\small\item\em Salva os servidores criados no sistema no arquivo servidores.\+txt. \end{DoxyCompactList}\item 
+\Hypertarget{class_sistema_aa3a447f5b25990c54a913124d3bb59dc}\label{class_sistema_aa3a447f5b25990c54a913124d3bb59dc} 
+void {\bfseries carregar\+Usuarios} ()
+\begin{DoxyCompactList}\small\item\em Carrega os usuários registrados previamente no arquivo usuarios.\+txt. \end{DoxyCompactList}\item 
+\Hypertarget{class_sistema_aa74c5118001598df07380cf2a05f236e}\label{class_sistema_aa74c5118001598df07380cf2a05f236e} 
+void {\bfseries carregar\+Servidores} ()
+\begin{DoxyCompactList}\small\item\em Carrega os servidores registrados previamente no arquivo servidores.\+txt. \end{DoxyCompactList}\item 
+\Hypertarget{class_sistema_af7da817dbcfd169a62162e6837834071}\label{class_sistema_af7da817dbcfd169a62162e6837834071} 
+void {\bfseries limpar\+Sistema} ()
+\begin{DoxyCompactList}\small\item\em Limpa o sistema, removendo todos os usuários e servidores. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -89,7 +113,17 @@ Classe que representa o sistema Concordo.
 Esta classe gerencia os usuários, servidores e interações do sistema Concordo. Ela permite criar usuários, criar servidores, gerenciar participantes, realizar login e muito mais. 
 
 \doxysubsection{Documentação das funções}
-\Hypertarget{class_sistema_ace3fe8638037b4551799db1fd8c58144}\label{class_sistema_ace3fe8638037b4551799db1fd8c58144} 
+\Hypertarget{class_sistema_a811a732f691bb1d231ce11458dd42539}\label{class_sistema_a811a732f691bb1d231ce11458dd42539} 
+\index{Sistema@{Sistema}!carregar@{carregar}}
+\index{carregar@{carregar}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{carregar()}{carregar()}}
+{\footnotesize\ttfamily void Sistema\+::carregar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Carrega o estado anteriormente salvo do sistema a partir de arquivos. 
+
+Esta função carrega os usuários e servidores previamente salvos nos arquivos \"{}usuarios.\+txt\"{} e \"{}servidores.\+txt\"{}, respectivamente, e os carrega para o sistema. \Hypertarget{class_sistema_ace3fe8638037b4551799db1fd8c58144}\label{class_sistema_ace3fe8638037b4551799db1fd8c58144} 
 \index{Sistema@{Sistema}!criarCanalServidorAtual@{criarCanalServidorAtual}}
 \index{criarCanalServidorAtual@{criarCanalServidorAtual}!Sistema@{Sistema}}
 \doxysubsubsection{\texorpdfstring{criarCanalServidorAtual()}{criarCanalServidorAtual()}}
@@ -231,7 +265,17 @@ Exibe uma mensagem específica.
 {\em m} & A mensagem a ser exibida. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{class_sistema_aff62f1f20362eeed65487601e033767b}\label{class_sistema_aff62f1f20362eeed65487601e033767b} 
+\Hypertarget{class_sistema_ae9e5eb79069d5ef512d7cc2f32129015}\label{class_sistema_ae9e5eb79069d5ef512d7cc2f32129015} 
+\index{Sistema@{Sistema}!limparCanaisServidores@{limparCanaisServidores}}
+\index{limparCanaisServidores@{limparCanaisServidores}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{limparCanaisServidores()}{limparCanaisServidores()}}
+{\footnotesize\ttfamily void Sistema\+::limpar\+Canais\+Servidores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Limpa os canais de todos os servidores. 
+
+Esta função percorre todos os servidores do sistema e remove todos os canais presentes em cada um deles. Os canais são removidos, liberando a memória alocada para eles. \Hypertarget{class_sistema_aff62f1f20362eeed65487601e033767b}\label{class_sistema_aff62f1f20362eeed65487601e033767b} 
 \index{Sistema@{Sistema}!login@{login}}
 \index{login@{login}!Sistema@{Sistema}}
 \doxysubsubsection{\texorpdfstring{login()}{login()}}
@@ -298,7 +342,17 @@ Retorna o índice de um servidor no vetor de servidores.
 \begin{DoxyReturn}{Retorna}
 O índice do servidor no vetor de servidores. Retorna -\/1 se o servidor não for encontrado. 
 \end{DoxyReturn}
-\Hypertarget{class_sistema_a6495331bc3a2d6ff7d12e41879536570}\label{class_sistema_a6495331bc3a2d6ff7d12e41879536570} 
+\Hypertarget{class_sistema_a118d16dc0bcefb5bbe29bdfd471def2c}\label{class_sistema_a118d16dc0bcefb5bbe29bdfd471def2c} 
+\index{Sistema@{Sistema}!salvar@{salvar}}
+\index{salvar@{salvar}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{salvar()}{salvar()}}
+{\footnotesize\ttfamily void Sistema\+::salvar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Salva o estado atual do sistema em arquivos. 
+
+Esta função salva os usuários e servidores do sistema em arquivos separados. Os usuários são salvos no arquivo \"{}usuarios.\+txt\"{} e os servidores no arquivo \"{}servidores.\+txt\"{}. \Hypertarget{class_sistema_a6495331bc3a2d6ff7d12e41879536570}\label{class_sistema_a6495331bc3a2d6ff7d12e41879536570} 
 \index{Sistema@{Sistema}!serverExiste@{serverExiste}}
 \index{serverExiste@{serverExiste}!Sistema@{Sistema}}
 \doxysubsubsection{\texorpdfstring{serverExiste()}{serverExiste()}}

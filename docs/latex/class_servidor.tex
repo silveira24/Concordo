@@ -18,6 +18,10 @@ std\+::string \mbox{\hyperlink{class_servidor_af094e7503c4fd8e124679f03eae3f0cd}
 \begin{DoxyCompactList}\small\item\em Obtém o nome do servidor. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_servidor_a26b0bc0263c27380ced8b2357c757f4e}{get\+IDdono}} ()
 \begin{DoxyCompactList}\small\item\em Obtém o ID do usuário dono do servidor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_servidor_a7862d3dc42a161feb7500d8caf7fe25d}{get\+Descricao}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a descrição do servidor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_servidor_ad90d4779029f04aba8ca6ce591d9430a}{get\+Convite}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o código convite do servidor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_servidor_a4a232f83c626f7afcd98f1aeed5986f5}{set\+Descricao}} (std\+::string \mbox{\hyperlink{class_servidor_a61fecd2b3435d7048d793741c5f3bfdf}{descricao}})
 \begin{DoxyCompactList}\small\item\em Define a descrição do servidor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_servidor_a8baf111eee2d2a02017177cf9bb00f4c}{set\+Convite}} (std\+::string convite)
@@ -44,7 +48,12 @@ void {\bfseries listar\+Canais} ()
 void \mbox{\hyperlink{class_servidor_a715ae41e5c299294f6f79a80c04a987f}{enviar\+Mensagem\+Canal}} (\mbox{\hyperlink{class_mensagem}{Mensagem}} m, int indice\+Canal)
 \begin{DoxyCompactList}\small\item\em Envia uma mensagem para o canal no índice especificado. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_canal}{Canal}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_servidor_a73036d14cc895275dd1e6791d8babde9}{retorna\+Canal}} (int indice)
-\begin{DoxyCompactList}\small\item\em Retorna o ponteiro para o canal no índice especificado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retorna o ponteiro para o canal no índice especificado. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_servidor_a352ddd7957265fea83f7121b409de468}{get\+Tam\+Canais}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a quantidade de canais no servidor. \end{DoxyCompactList}\item 
+\Hypertarget{class_servidor_ad7ed928deab4b182a02d648562d6202e}\label{class_servidor_ad7ed928deab4b182a02d648562d6202e} 
+void {\bfseries limpar\+Canais} ()
+\begin{DoxyCompactList}\small\item\em desaloca a memoria alocada dinamicamente pelos canais do servidor \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -157,6 +166,32 @@ Verifica se existe um canal com o nome e tipo especificados.
 \begin{DoxyReturn}{Retorna}
 true se o canal existe, false caso contrário. 
 \end{DoxyReturn}
+\Hypertarget{class_servidor_ad90d4779029f04aba8ca6ce591d9430a}\label{class_servidor_ad90d4779029f04aba8ca6ce591d9430a} 
+\index{Servidor@{Servidor}!getConvite@{getConvite}}
+\index{getConvite@{getConvite}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getConvite()}{getConvite()}}
+{\footnotesize\ttfamily std\+::string Servidor\+::get\+Convite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o código convite do servidor. 
+
+\begin{DoxyReturn}{Retorna}
+código convite do servidor 
+\end{DoxyReturn}
+\Hypertarget{class_servidor_a7862d3dc42a161feb7500d8caf7fe25d}\label{class_servidor_a7862d3dc42a161feb7500d8caf7fe25d} 
+\index{Servidor@{Servidor}!getDescricao@{getDescricao}}
+\index{getDescricao@{getDescricao}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getDescricao()}{getDescricao()}}
+{\footnotesize\ttfamily std\+::string Servidor\+::get\+Descricao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém a descrição do servidor. 
+
+\begin{DoxyReturn}{Retorna}
+Descrição do servidor 
+\end{DoxyReturn}
 \Hypertarget{class_servidor_a26b0bc0263c27380ced8b2357c757f4e}\label{class_servidor_a26b0bc0263c27380ced8b2357c757f4e} 
 \index{Servidor@{Servidor}!getIDdono@{getIDdono}}
 \index{getIDdono@{getIDdono}!Servidor@{Servidor}}
@@ -182,6 +217,19 @@ Obtém o nome do servidor.
 
 \begin{DoxyReturn}{Retorna}
 Nome do servidor 
+\end{DoxyReturn}
+\Hypertarget{class_servidor_a352ddd7957265fea83f7121b409de468}\label{class_servidor_a352ddd7957265fea83f7121b409de468} 
+\index{Servidor@{Servidor}!getTamCanais@{getTamCanais}}
+\index{getTamCanais@{getTamCanais}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getTamCanais()}{getTamCanais()}}
+{\footnotesize\ttfamily int Servidor\+::get\+Tam\+Canais (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém a quantidade de canais no servidor. 
+
+\begin{DoxyReturn}{Retorna}
+quantidade de canais no servidor 
 \end{DoxyReturn}
 \Hypertarget{class_servidor_ac1224e90d1e17d155f946e6a0935c25c}\label{class_servidor_ac1224e90d1e17d155f946e6a0935c25c} 
 \index{Servidor@{Servidor}!IDparticipante@{IDparticipante}}

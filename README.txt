@@ -27,11 +27,12 @@ Compilar o programa:
 mkdir build
 cd build
 cmake ..
-cmake --build .
+cd ..
+cmake --build build
 
 Executar o programa:
 
-./Concordo
+./build/Concordo
 
 
 Roteiro de Exemplo:

@@ -1,7 +1,7 @@
 #ifndef CANALTEXTO_H
 #define CANALTEXTO_H
 
-#include "canal.h"
+#include "Canal.h"
 #include <vector>
 
 /**
